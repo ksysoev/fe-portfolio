@@ -1,0 +1,20 @@
+include ../dropdown/dropdown
+
+mixin navBar()
+  +b('nav').navBar
+    +e('ul').list
+      +e('li').item
+        +e('a').link(href="#intro") Why us?
+      +e('li').item
+        +e('a').link(href="#portfolio") Case studies
+      +e('li').item
+        +e('a').link(href="#videoPortfolio") Video portfolio
+      +e('li').item
+        +e('a').link(href="#review") Testimonials
+      +e('li').item
+        +e('a').link(href="#top") Who are we?
+      +e('li').item
+        +dropdown({"togleName":"Services","togleClass":"navBar__link","items":[{"name":"Data analysis","link":"#services"},{"name":"Global promotions","link":"#services"},{"name":"Placements","link":"#services"},{"name":"Strategic","link":"#services"},{"name":"Expertise","link":"#services"},{"name":"Production","link":"#services"}]})
+      +e('li').item
+        +e('a').link(href="#footer") Contact us
+  // end navBar block

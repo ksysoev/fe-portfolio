@@ -1,0 +1,55 @@
+.introContent {
+  padding-top: 335px;
+  &__item {
+    display: inline-block;
+    width: 280px;
+    margin-right: 20px;
+    vertical-align: middle;
+    &:last-of-type{
+      margin-right: 0;
+    }
+    &::after {
+      content: "";
+      display: block;
+      margin-top: 25px;
+      width: 20px;
+      height: 1px;
+      background-color: white;
+    }
+  }
+  &__header {
+    text-transform: uppercase;
+    color: $emphasis-color;
+  }
+  &__heading {
+    margin-bottom: 2rem;
+    font-size: 2.4rem;
+    display: inline-block;
+    &::before{
+      content: "";
+      display: inline-block;
+    }
+    &_type_digital::before{
+        @include sprite($digital-small);
+        margin-bottom: -8px;
+        margin-right: 10px;
+    }
+    &_type_video::before{
+        @include sprite($video);
+        margin-bottom: -2px;
+        margin-right: 10px;
+
+    }
+    &_type_solution::before{
+        @include sprite($solution);
+        margin-bottom: -5px;
+        margin-right: 10px;
+    }
+  }
+  &__text {}
+  &__link {
+    display: inline;
+    color: $general-color;
+    margin-left: 1rem;
+  }
+}

@@ -1,0 +1,113 @@
+.portfolioContent{
+  padding-top: 50px;
+  text-align: center;
+  width: 1300px;
+  overflow: hidden;
+  &__header{
+    text-align: center;
+    font-family: $header-font;
+    &::after {
+      content: "";
+      display: block;
+      margin: 35px auto 0;
+      width: 60px;
+      height: 2px;
+      background-color: white;
+    }
+  }
+  &__list{
+    margin-top: 40px;
+  }
+  &__item{
+    display: inline-block;
+    width: 400px;
+    height: 475px;
+    margin-right: 5px;
+    &:first-of-type{
+      margin-left: 65px;
+    }
+    &:last-of-type{
+      margin-right: 0;
+    }
+    &_type_cola{
+      .portfolioContent__image{
+        background: url(../images/portfolio1.jpg) 50% 50% no-repeat #620204;
+      }
+    }
+    &_type_apple{
+      .portfolioContent__image{
+        background: url(../images/portfolio2.jpg) 50% 50% no-repeat #ffffff;
+      }
+    }
+    &_type_nokia{
+      .portfolioContent__image{
+        background: url(../images/portfolio3.jpg) 50% 50% no-repeat #f2f2f2;
+      }
+    }
+    &:hover{
+      .portfolioContent__link{
+        opacity: 1;
+        color: $general-color;
+      }
+      .portfolioContent__overlay{
+        background-color: rgba(42,49,54,.8);
+      }
+    }
+  }
+  &__link{
+    font-family: $header-font;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    display: block;
+    top:210px;
+    left: -35px;
+    opacity: .8;
+    color: $general-color;
+    text-decoration: none;
+    transition: all .3s;
+  }
+  &__product{
+    display: block;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  &__company{
+    display: block;
+    font-size: 2.8rem;
+    &::after {
+      content: "";
+      display: block;
+      margin: 25px auto 0;
+      width: 32px;
+      height: 2px;
+      background-color: white;
+    }
+  }
+  &__background{
+    position: relative;
+    width: 325px;
+    height: 325px;
+    transform: rotate(-149deg);
+    overflow: hidden;
+
+  }
+  &__overlay{
+    position: absolute;
+    width: 105%;
+    height: 105%;
+    background-color: rgba(42,49,54,.4);
+    bottom: -10px;
+    left: -10px;
+    transition: background .3s;
+  }
+  &__image{
+    position: relative;
+    width: 460px;
+    height: 460px;
+    transform: rotate(149deg);
+    bottom: 65px;
+    left: -70px;
+  }
+}

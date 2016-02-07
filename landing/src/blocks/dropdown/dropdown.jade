@@ -1,0 +1,8 @@
+mixin dropdown(content)
+ +b.dropdown
+  +e('a').toggle(class=content.togleClass) #{content.togleName}
+    include dropdown__icon
+  +e('ul').content
+    each item in content.items
+      +e('li').item
+        +e('a').link(href=item.link) #{item.name}

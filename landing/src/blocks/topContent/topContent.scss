@@ -1,0 +1,50 @@
+.topContent{
+  padding-top: 350px;
+  width: 1215px;
+  margin: 0 auto;
+  &__item{
+    display: inline-block;
+    width: 350px;
+    margin-right: 50px;
+    text-align: left;
+    &:last-of-type{
+      margin-right: 0;
+    }
+    &::after {
+      content: "";
+      display: block;
+      margin-top: 15px;
+      width: 20px;
+      height: 1px;
+      background-color: white;
+    }
+  }
+  &__heading{
+    font-size: 3rem;
+    margin-bottom: 23px;
+    box-sizing: border-box;
+    &::before{
+      content: "";
+      display: inline-block;
+    }
+    &_type_digital::before{
+        @include sprite($digital);
+        margin-bottom: -8px;
+        margin-right: 20px;
+    }
+    &_type_creative::before{
+        @include sprite($creative);
+        margin-bottom: -8px;
+        margin-right: 30px;
+    }
+    &_type_media::before{
+        @include sprite($media);
+        margin-bottom: -8px;
+        margin-right: 25px;
+    }
+  }
+  &__text{
+    font-size: 1.45rem;
+    line-height: 2rem;
+  }
+}

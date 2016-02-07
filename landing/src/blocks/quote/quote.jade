@@ -1,0 +1,22 @@
+mixin quote()
+  +b.quote
+    input(id="item1" type="radio" name="control" checked="checked")
+    input(id="item2" type="radio" name="control")
+    input(id="item3" type="radio" name="control")
+    +e('ul').list
+      +e('li').item
+        +e('img').image(src="../images/quotePhoto.jpg" alt="Michael Dawson, San Francisco, CA")
+        +e('p').text “I know that feeling of trust that job will be done perfectly. That’s how it was working with CompanyName. They knew exactly what we wanted.”
+        +e('p').author Michael Dawson, San Francisco, CA
+      +e('li').item
+        +e('img').image(src="../images/quotePhoto.jpg" alt="Michael Dawson, San Francisco, CA")
+        +e('p').text “You know that feeling of trust that job will be done perfectly. That’s how it was working with CompanyName. They knew exactly what we wanted.”
+        +e('p').author Michael Dawson, San Francisco, CA
+      +e('li').item
+        +e('img').image(src="../images/quotePhoto.jpg" alt="Michael Dawson, San Francisco, CA")
+        +e('p').text “They know that feeling of trust that job will be done perfectly. That’s how it was working with CompanyName. They knew exactly what we wanted.”
+        +e('p').author Michael Dawson, San Francisco, CA
+    +e.control
+      +e('label').controlItem(for="item1")
+      +e('label').controlItem(for="item2")
+      +e('label').controlItem(for="item3")

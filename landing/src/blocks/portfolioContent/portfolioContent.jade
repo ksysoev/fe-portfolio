@@ -1,0 +1,25 @@
+mixin portfolioContent()
+  +b.portfolioContent
+   +e('h2').header Our case studies
+   +e('ul').list
+    +e('li').item._type_cola
+      +e('a').link(href="#")
+        +e('span').product Creative expertise
+        +e('span').company Coca-Cola
+      +e.background
+        +e.image
+        +e.overlay
+    +e('li').item._type_apple
+      +e('a').link(href="#")
+        +e('span').product Data analysis
+        +e('span').company Apple
+      +e.background
+        +e.image
+        +e.overlay
+    +e('li').item._type_nokia
+      +e('a').link(href="#")
+        +e('span').product Media strategy
+        +e('span').company Nokia
+      +e.background
+        +e.image
+        +e.overlay

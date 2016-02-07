@@ -1,0 +1,21 @@
+include ../../../node_modules/bemto.jade/bemto.jade
+include ../page/page
+include ../container/container
+include ../header/header
+include ../navBar/navBar
+include ../footer/footer
+include ../button/button
+include ../footerContent/footerContent
+
+doctype html
+include ../head/head
+html(lang='ru')
+  +page
+    +header
+      +container
+        +navBar
+    block content
+    +footer
+      +button({"modificator":"footer","name":"Request consultation","href":"#","location":"footer"})
+      +footerContent
+    script(type="text/javascript" src="js/app.min.js")

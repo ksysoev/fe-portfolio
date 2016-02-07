@@ -1,0 +1,84 @@
+.services {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  padding-bottom: 100px;
+  &__firstList {
+    position: absolute;
+    top: 475px;
+    left: 120px;
+  }
+  &__secondList {
+    position: absolute;
+    top: 515px;
+    left: 335px;
+  }
+  &__item {
+    position: relative;
+    display: block;
+    width: 265px;
+    height: 265px;
+    &:nth-of-type(2) {
+      left: 105px;
+      top: -438px;
+    }
+    &:nth-of-type(3) {
+      left: 209px;
+      top: -876px;
+    }
+    &:hover {
+      .services__background {
+        background-color: $white-background;
+      }
+      a {
+        color: $dark-color;
+      }
+    }
+  }
+  &__link {
+    position: absolute;
+    display: block;
+    width: 150px;
+    z-index: 2;
+    text-align: center;
+    margin-top: 60px;
+    margin-left: 30px;
+    text-transform: uppercase;
+    color: $general-color;
+    text-decoration: none;
+    transition: color .4s;
+    font-size: 1.4rem;
+    &::before {
+      content: "";
+      display: block;
+      margin: 0 auto 10px;
+    }
+    &_type_digitalSmall::before {
+      @include sprite($digital-small);
+    }
+    &_type_global::before {
+      @include sprite($global);
+    }
+    &_type_data::before {
+      @include sprite($data);
+    }
+    &_type_scripts::before {
+      @include sprite($scripts);
+    }
+    &_type_creative::before {
+      @include sprite($creative-small);
+    }
+    &_type_development::before {
+      @include sprite($development);
+    }
+  }
+  &__background {
+    position: absolute;
+    width: 192px;
+    height: 192px;
+    display: block;
+    background-color: $dark-background;
+    transition: background-color .4s;
+    transform: rotate(-149deg);
+  }
+}

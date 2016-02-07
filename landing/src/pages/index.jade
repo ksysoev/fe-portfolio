@@ -1,0 +1,31 @@
+extends ../blocks/default-layout/default-layout
+include ../blocks/section/section
+include ../blocks/topContent/topContent
+include ../blocks/button/button
+include ../blocks/introContent/introContent
+include ../blocks/serviceContent/serviceContent
+include ../blocks/portfolioContent/portfolioContent
+include ../blocks/videoPortfolioContent/videoPortfolioContent
+include ../blocks/quote/quote
+include ../blocks/footer/footer
+include ../blocks/footerContent/footerContent
+
+block head
+  - var pageTitle = 'Portfolio Landing Page';
+
+
+block content
+  +section("top")
+    +topContent
+    +button({"modificator":"normal","name":"request consultation","href":"#","location":"top"})
+  +section("intro")
+    +introContent
+  +section("services")
+    +serviceContent
+  +section("portfolio")
+    +portfolioContent
+    +button({"modificator":"emphasis","name":"explore more case studies","href":"#","location":"portfolio"})
+  +section("videoPortfolio")
+    +videoPortfolioContent
+  +section("review")
+    +quote

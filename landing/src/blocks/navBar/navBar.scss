@@ -1,0 +1,24 @@
+.navBar {
+  &__list {
+    text-align: center;
+    margin-top: 29px;
+  }
+  &__item {
+    display: inline-block;
+    margin-right: 3.5rem;
+    border-bottom: 1px solid transparent;
+    transition: all .5s;
+    &:last-of-type{
+      margin-right: 0;
+    }
+    &:hover{
+      border-color: $general-color;
+    }
+  }
+  &__link {
+    font-size: 1.68rem;
+    font-family: $header-font;
+    text-decoration: none;
+    color: $general-color;
+  }
+}

@@ -1,0 +1,41 @@
+.footerContent{
+  width: 1215px;
+  margin: 70px auto 0;
+  &__col{
+    display: inline-block;
+    vertical-align: top;
+    &:nth-of-type(1){
+      width: 330px;
+    }
+    &:nth-of-type(2){
+      width: 350px;
+    }
+    &:nth-of-type(3){
+      width: 300px;
+    }
+    &:nth-of-type(4){
+      width: 200px;
+    }
+  }
+  &__heading{
+    margin-bottom: 30px;
+    font-size: 1.3rem;
+    color: $dark-color;
+  }
+  &__item{
+
+  }
+  &__link{
+    font-family: $header-font;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    color: $general-color;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid transparent;
+    transition: all .5s;
+    &:hover{
+      border-color: $general-color;
+    }
+  }
+}

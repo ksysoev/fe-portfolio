@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+$general-font: 'Inconsolata', "Courier New" , Courier, monospace;
+@font-face {
+  font-family: 'Geogrotesque';
+  src: url('assets/fonts/Geogrotesque-Medium.eot?#iefix') format('embedded-opentype'), url('assets/fonts/Geogrotesque-Medium.otf') format('opentype'), url('assets/fonts/Geogrotesque-Medium.woff') format('woff'), url('assets/fonts/Geogrotesque-Medium.ttf') format('truetype'), url('assets/fonts/Geogrotesque-Medium.svg#Geogrotesque-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+$header-font: 'Geogrotesque', Tahoma, Geneva, sans-serif;

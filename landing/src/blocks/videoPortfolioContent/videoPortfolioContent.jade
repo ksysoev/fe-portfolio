@@ -1,0 +1,21 @@
+mixin videoPortfolioContent()
+  +b.videoPortfolioContent
+    +e('ul').list
+      +e('li').item._type_first
+        +e.link(href="#")
+          include videoPortfolioContent__icon
+        +e.background
+          +e.image
+          +e.overlay
+      +e('li').item._type_second
+        +e.link(href="#")
+          include videoPortfolioContent__icon
+        +e.background
+          +e.image
+          +e.overlay
+      +e('li').item._type_third
+        +e.link(href="#")
+          include videoPortfolioContent__icon
+        +e.background
+          +e.image
+          +e.overlay

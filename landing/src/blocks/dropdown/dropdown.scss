@@ -1,0 +1,51 @@
+.dropdown{
+  &__toggle{
+    overflow: hidden;
+    position: relative;
+  }
+  &__content{
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 1rem;
+    transition: all .5s;
+    text-align: left;
+    background-color: #0d151f;
+    background-color: rgba(13, 21, 31, .7);
+    border: 0px solid transparent;
+    transition:all .3s ease-out .8s;
+    &_status_opened{
+      height: 16.8rem;
+      padding: 2rem;
+      border: 1px solid $general-color;
+      border-radius:5px;
+      transition:all .3s ease-out .2s;
+    }
+  }
+  &__item{
+
+  }
+  &__link{
+    color: $general-color;
+    font: 1.4rem/2 $header-font;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all .5s;
+    &:hover{
+      border-color: $general-color;
+    }
+  }
+  &__icon{
+    height: 2.3rem;
+    width: 2rem;
+    margin-left: .5rem;
+    fill:$general-color;
+    top:-.1rem;
+    position: absolute;
+  }
+  &:hover{
+    .dropdown__content{
+      @extend .dropdown__content_status_opened;
+    }
+  }
+}

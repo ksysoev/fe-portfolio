@@ -1,0 +1,7 @@
+include ../container/container
+
+mixin section(modificator)
+  +b('section').section(class="section_type_"+modificator id=modificator)
+    +container
+      block
+  <!-- end #{modificator} block -->
