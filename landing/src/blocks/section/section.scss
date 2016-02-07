@@ -5,11 +5,11 @@
     background: url(../images/top_bg.jpg) top center;
     height: 891px;
     text-align: center;
-    animation: sectionFadeIn 1s ease-in;
+    animation: sectionFadeIn 1.5s ease-in;
   }
   &_type_intro {
     height: 880px;
-    animation: sectionFadeIn 1s ease-in;
+    animation: sectionFadeIn 2s ease-in;
   }
   &_type_services {
     height: 890px;
@@ -18,7 +18,7 @@
     height: 885px;
     text-align: center;
     .container {
-      width: 100%;
+      width: 1300px;
     }
   }
   &_type_videoPortfolio {
@@ -39,12 +39,15 @@
 @keyframes sectionFadeIn {
   0% {
     opacity: 0;
-    filter:blur(10px);
     transform: translateZ(0);
+    filter:blur(5px);
+  }
+  40% {
+    opacity: .8;
+    filter:blur(5px);
   }
   100% {
     opacity: 1;
     filter:blur(0);
-    transform: translateZ(0);
   }
 }
