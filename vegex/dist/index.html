@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>Овощная биржа</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="css/app.css" rel="stylesheet">
+	</head>
+
+	<body class="page">
+		<header class="header">
+			<div class="container">
+				<div class="headerContent"><a href="/" class="headerContent__logo">Овощная биржа</a>
+					<div class="headerContent__info">
+						<div class="headerContent__time">Среда, 12.01.2016, 18:26</div>
+						<div class="headerContent__schedule">
+							Торги <span>проводятся </span>с 8-16 в будние дни</div>
+						<div class="headerContent__trades">Торги открыты</div>
+						<!-- +e.trades._status_close Торги завершены-->
+					</div>
+					<div class="headerContent__btnGroup"><a href="http://torgi.fshb.ru/login" class="btn btn_type_login">Вход</a><a href="http://torgi.fshb.ru/register" class="btn btn_type_register">Регистрация</a>
+					</div>
+				</div>
+				<!-- end headerContent block-->
+			</div>
+		</header>
+		<!-- end header block-->
+		<article class="content">
+			<div class="container">
+				<!-- +message("Для просмотра подробной информации о лоте, необходимо войти в систему")-->
+				<!-- +message("Для того, чтобы сделать ставку, необходимо войти в систему")-->
+				<div class="tabs">
+					<ul class="tabs__nav">
+						<li class="tabs__tab tabs__tab_status_active"> <a>Предложение</a>
+						</li>
+						<li class="tabs__tab"> <a href="#">Спрос</a>
+						</li>
+					</ul>
+					<div class="tabs__contents">
+						<div class="tabs__tabContent tabs__tabContent_status_active">
+							<table class="lots">
+								<thead class="lots__header">
+									<tr>
+										<th class="lots__product">Товар</th>
+										<th class="lots__vendor">Продавец</th>
+										<th class="lots__quantity">Общее кол-во (кг)</th>
+										<th class="lots__min">Мин. партия (кг)</th>
+										<th class="lots__caliber">Калибр (см)</th>
+										<th class="lots__price">Цена (р/кг)</th>
+										<th class="lots__region">Регион</th>
+										<th class="lots__rates">Ставки</th>
+										<th class="lots__button"></th>
+									</tr>
+								</thead>
+								<tbody class="lots__content">
+									<tr>
+										<td class="lots__product"> <a href="http://torgi.fshb.ru/login">Лук репчатый</a><a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+										<td class="lots__vendor">Пархоменко А.М.</td>
+										<td class="lots__quantity">20 000</td>
+										<td class="lots__min">200</td>
+										<td class="lots__caliber">15</td>
+										<td class="lots__price">45</td>
+										<td class="lots__region">Волгоградская обл.</td>
+										<td class="lots__rates">35</td>
+										<td class="lots__button"> <a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="lots__product"> <a href="http://torgi.fshb.ru/login">Лук репчатый</a><a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+										<td class="lots__vendor">Пархоменко А.М.</td>
+										<td class="lots__quantity">20 000</td>
+										<td class="lots__min">200</td>
+										<td class="lots__caliber">15</td>
+										<td class="lots__price">45</td>
+										<td class="lots__region">Волгоградская обл.</td>
+										<td class="lots__rates">35</td>
+										<td class="lots__button"> <a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="lots__product"> <a href="http://torgi.fshb.ru/login">Лук репчатый</a><a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+										<td class="lots__vendor">Пархоменко А.М.</td>
+										<td class="lots__quantity">20 000</td>
+										<td class="lots__min">200</td>
+										<td class="lots__caliber">15</td>
+										<td class="lots__price">45</td>
+										<td class="lots__region">Волгоградская обл.</td>
+										<td class="lots__rates">35</td>
+										<td class="lots__button"> <a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="lots__product"> <a href="http://torgi.fshb.ru/login">Лук репчатый</a><a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+										<td class="lots__vendor">Пархоменко А.М.</td>
+										<td class="lots__quantity">20 000</td>
+										<td class="lots__min">200</td>
+										<td class="lots__caliber">15</td>
+										<td class="lots__price">45</td>
+										<td class="lots__region">Волгоградская обл.</td>
+										<td class="lots__rates">35</td>
+										<td class="lots__button"> <a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="lots__product"> <a href="http://torgi.fshb.ru/login">Лук репчатый</a><a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+										<td class="lots__vendor">Пархоменко А.М.</td>
+										<td class="lots__quantity">20 000</td>
+										<td class="lots__min">200</td>
+										<td class="lots__caliber">15</td>
+										<td class="lots__price">45</td>
+										<td class="lots__region">Волгоградская обл.</td>
+										<td class="lots__rates">35</td>
+										<td class="lots__button"> <a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="lots__product"> <a href="http://torgi.fshb.ru/login">Лук репчатый</a><a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+										<td class="lots__vendor">Пархоменко А.М.</td>
+										<td class="lots__quantity">20 000</td>
+										<td class="lots__min">200</td>
+										<td class="lots__caliber">15</td>
+										<td class="lots__price">45</td>
+										<td class="lots__region">Волгоградская обл.</td>
+										<td class="lots__rates">35</td>
+										<td class="lots__button"> <a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="lots__product"> <a href="http://torgi.fshb.ru/login">Лук репчатый</a><a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+										<td class="lots__vendor">Пархоменко А.М.</td>
+										<td class="lots__quantity">20 000</td>
+										<td class="lots__min">200</td>
+										<td class="lots__caliber">15</td>
+										<td class="lots__price">45</td>
+										<td class="lots__region">Волгоградская обл.</td>
+										<td class="lots__rates">35</td>
+										<td class="lots__button"> <a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="lots__product"> <a href="http://torgi.fshb.ru/login">Лук репчатый</a><a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+										<td class="lots__vendor">Пархоменко А.М.</td>
+										<td class="lots__quantity">20 000</td>
+										<td class="lots__min">200</td>
+										<td class="lots__caliber">15</td>
+										<td class="lots__price">45</td>
+										<td class="lots__region">Волгоградская обл.</td>
+										<td class="lots__rates">35</td>
+										<td class="lots__button"> <a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="lots__product"> <a href="http://torgi.fshb.ru/login">Лук репчатый</a><a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+										<td class="lots__vendor">Пархоменко А.М.</td>
+										<td class="lots__quantity">20 000</td>
+										<td class="lots__min">200</td>
+										<td class="lots__caliber">15</td>
+										<td class="lots__price">45</td>
+										<td class="lots__region">Волгоградская обл.</td>
+										<td class="lots__rates">35</td>
+										<td class="lots__button"> <a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="lots__product"> <a href="http://torgi.fshb.ru/login">Лук репчатый</a><a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+										<td class="lots__vendor">Пархоменко А.М.</td>
+										<td class="lots__quantity">20 000</td>
+										<td class="lots__min">200</td>
+										<td class="lots__caliber">15</td>
+										<td class="lots__price">45</td>
+										<td class="lots__region">Волгоградская обл.</td>
+										<td class="lots__rates">35</td>
+										<td class="lots__button"> <a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<!-- end lots block--><a href="#" class="btn btn_type_lots">больше лотов</a>
+						</div>
+						<div class="tabs__tabContent tabs__tabContent_status_active">
+							<table class="lots">
+								<thead class="lots__header">
+									<tr>
+										<th class="lots__product">Товар</th>
+										<th class="lots__vendor">Продавец</th>
+										<th class="lots__quantity">Общее кол-во (кг)</th>
+										<th class="lots__min">Мин. партия (кг)</th>
+										<th class="lots__caliber">Калибр (см)</th>
+										<th class="lots__price">Цена (р/кг)</th>
+										<th class="lots__region">Регион</th>
+										<th class="lots__rates">Ставки</th>
+										<th class="lots__button"></th>
+									</tr>
+								</thead>
+								<tbody class="lots__content">
+									<tr>
+										<td class="lots__product"> <a href="http://torgi.fshb.ru/login">Лук репчатый</a><a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+										<td class="lots__vendor">Пархоменко А.М.</td>
+										<td class="lots__quantity">20 000</td>
+										<td class="lots__min">200</td>
+										<td class="lots__caliber">15</td>
+										<td class="lots__price">45</td>
+										<td class="lots__region">Волгоградская обл.</td>
+										<td class="lots__rates">35</td>
+										<td class="lots__button"> <a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="lots__product"> <a href="http://torgi.fshb.ru/login">Лук репчатый</a><a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+										<td class="lots__vendor">Пархоменко А.М.</td>
+										<td class="lots__quantity">20 000</td>
+										<td class="lots__min">200</td>
+										<td class="lots__caliber">15</td>
+										<td class="lots__price">45</td>
+										<td class="lots__region">Волгоградская обл.</td>
+										<td class="lots__rates">35</td>
+										<td class="lots__button"> <a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="lots__product"> <a href="http://torgi.fshb.ru/login">Лук репчатый</a><a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+										<td class="lots__vendor">Пархоменко А.М.</td>
+										<td class="lots__quantity">20 000</td>
+										<td class="lots__min">200</td>
+										<td class="lots__caliber">15</td>
+										<td class="lots__price">45</td>
+										<td class="lots__region">Волгоградская обл.</td>
+										<td class="lots__rates">35</td>
+										<td class="lots__button"> <a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="lots__product"> <a href="http://torgi.fshb.ru/login">Лук репчатый</a><a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+										<td class="lots__vendor">Пархоменко А.М.</td>
+										<td class="lots__quantity">20 000</td>
+										<td class="lots__min">200</td>
+										<td class="lots__caliber">15</td>
+										<td class="lots__price">45</td>
+										<td class="lots__region">Волгоградская обл.</td>
+										<td class="lots__rates">35</td>
+										<td class="lots__button"> <a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="lots__product"> <a href="http://torgi.fshb.ru/login">Лук репчатый</a><a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+										<td class="lots__vendor">Пархоменко А.М.</td>
+										<td class="lots__quantity">20 000</td>
+										<td class="lots__min">200</td>
+										<td class="lots__caliber">15</td>
+										<td class="lots__price">45</td>
+										<td class="lots__region">Волгоградская обл.</td>
+										<td class="lots__rates">35</td>
+										<td class="lots__button"> <a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="lots__product"> <a href="http://torgi.fshb.ru/login">Лук репчатый</a><a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+										<td class="lots__vendor">Пархоменко А.М.</td>
+										<td class="lots__quantity">20 000</td>
+										<td class="lots__min">200</td>
+										<td class="lots__caliber">15</td>
+										<td class="lots__price">45</td>
+										<td class="lots__region">Волгоградская обл.</td>
+										<td class="lots__rates">35</td>
+										<td class="lots__button"> <a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="lots__product"> <a href="http://torgi.fshb.ru/login">Лук репчатый</a><a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+										<td class="lots__vendor">Пархоменко А.М.</td>
+										<td class="lots__quantity">20 000</td>
+										<td class="lots__min">200</td>
+										<td class="lots__caliber">15</td>
+										<td class="lots__price">45</td>
+										<td class="lots__region">Волгоградская обл.</td>
+										<td class="lots__rates">35</td>
+										<td class="lots__button"> <a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="lots__product"> <a href="http://torgi.fshb.ru/login">Лук репчатый</a><a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+										<td class="lots__vendor">Пархоменко А.М.</td>
+										<td class="lots__quantity">20 000</td>
+										<td class="lots__min">200</td>
+										<td class="lots__caliber">15</td>
+										<td class="lots__price">45</td>
+										<td class="lots__region">Волгоградская обл.</td>
+										<td class="lots__rates">35</td>
+										<td class="lots__button"> <a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="lots__product"> <a href="http://torgi.fshb.ru/login">Лук репчатый</a><a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+										<td class="lots__vendor">Пархоменко А.М.</td>
+										<td class="lots__quantity">20 000</td>
+										<td class="lots__min">200</td>
+										<td class="lots__caliber">15</td>
+										<td class="lots__price">45</td>
+										<td class="lots__region">Волгоградская обл.</td>
+										<td class="lots__rates">35</td>
+										<td class="lots__button"> <a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="lots__product"> <a href="http://torgi.fshb.ru/login">Лук репчатый</a><a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+										<td class="lots__vendor">Пархоменко А.М.</td>
+										<td class="lots__quantity">20 000</td>
+										<td class="lots__min">200</td>
+										<td class="lots__caliber">15</td>
+										<td class="lots__price">45</td>
+										<td class="lots__region">Волгоградская обл.</td>
+										<td class="lots__rates">35</td>
+										<td class="lots__button"> <a href="http://torgi.fshb.ru/login" class="btn btn_type_undefined">Сделать ставку</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<!-- end lots block--><a href="#" class="btn btn_type_lots">больше лотов</a>
+						</div>
+					</div>
+				</div>
+				<!-- end tabs block-->
+			</div>
+			<!-- end container block-->
+		</article>
+		<!-- end content block-->
+		<footer class="footer">
+			<div class="container">
+				<div class="footerContent">
+					<div class="footerContent__logo"></div>
+					<ul class="footerContent__contacts">
+						<li class="footerContent__contact">ИНН 7017330440</li>
+						<li class="footerContent__contact"><a href="tel:+78005555933">8-800-5555-933</a>
+						</li>
+						<li class="footerContent__contact"><a href="mailto:info@supl.biz">info@supl.biz</a>
+						</li>
+					</ul>
+					<ul class="footerContent__links">
+						<li class="footerContent__link"><a href="#">О нас</a>
+						</li>
+						<li class="footerContent__link"><a href="#">Связаться с нами</a>
+						</li>
+						<li class="footerContent__link"><a href="#">Q&A</a>
+						</li>
+						<li class="footerContent__link"><a href="#">Условия использования</a>
+						</li>
+						<li class="footerContent__link"><a href="#">Реквизиты ООО Сапл-биз</a>
+						</li>
+					</ul>
+					<ul class="social">
+						<li class="social__item"><a href="#" class="social__link"><i class="fa fa-facebook"></i></a>
+						</li>
+						<li class="social__item"><a href="#" class="social__link"><i class="fa fa-linkedin"></i></a>
+						</li>
+						<li class="social__item"><a href="#" class="social__link"><i class="fa fa-vk"></i></a>
+						</li>
+						<li class="social__item"><a href="#" class="social__link"><i class="fa fa-odnoklassniki"></i></a>
+						</li>
+					</ul>
+					<!-- end social block-->
+					<p class="footerContent__description">Бесплатная электронная торговая площадка для малого бизнеса. Может использоваться в качестве канала сбыта. Подходит для поиска поставщиков и закупки товаров. Удобна для реализации товаров и услуг. Упрощает продажи в регионы.</p>
+					<p class="footerContent__keywords">Конкурсы, аукционы, тендеры, котировки. Поиск покупателей, заказчиков, поставщиков. Малый и средний бизнес, микробизнес, ИП. Товары, услуги, работы, продукты, продукция. Отзывы.
+					</p>
+				</div>
+				<!-- end footerContent block-->
+			</div>
+			<!-- end container block-->
+		</footer>
+		<!-- end footer block-->
+		<script type="text/javascript" src="js/app.min.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,143 @@
+.footerContent{
+  position: relative;
+  padding: 20px 0 25px 0;
+  font-family: $footerFont;
+  color: $footerColor;
+  overflow: hidden;
+  box-sizing: border-box;
+  &__links{
+    display: inline-block;
+    width: 23%;
+    @include mobile {
+      width: 100%;
+
+    };
+    @include tablet {
+      width: 29%;
+      margin-bottom: 15px
+
+    };
+  }
+  &__link{
+    display: block;
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+    @include mobile {
+      border-top: 1px solid $tabBorderColor;
+      display: block;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+
+    };
+    @include tablet {
+      margin-bottom: 0;
+
+    };
+    &_hide_tablet{
+      @include mobile {
+        display: none;
+
+      };
+      @include tablet {
+        display: none;
+      };
+    }
+    a{
+      text-decoration: none;
+      color: $footerColor;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  &__logo{
+     float: left;
+     width: 26%;
+     height: 51px;
+     display: inline-block;
+     background: url('../images/logoFooter.png') 0 0 no-repeat;
+     margin-left: -5px;
+     margin-bottom: 5px;
+     @include mobile {
+        width: 100%;
+        background-position: 50% 50%;
+     };
+     @include tablet {
+       margin-bottom: 0;
+       float: none;
+       width: 100%;
+     };
+  }
+  &__contacts{
+    font-size: 1.3rem;
+    float: left;
+    width: 26%;
+    display: inline-block;
+    clear: left;
+    margin-bottom: 15px;
+    @include mobile {
+      width: 100%;
+      text-align: center;
+    };
+    @include tablet {
+      width: 30%;
+      margin-left: 45px;
+    };
+
+  }
+  &__contact{
+    line-height: 2rem;
+    a{
+      color: $footerColor;
+      text-decoration: none;
+      &:hover{
+        text-decoration: underline;
+      }
+
+    }
+  }
+  &__description{
+    top: 20px;
+    display: inline-block;
+    float: right;
+    font-size: 1.3rem;
+    width: 49.20634921%;
+    position: absolute;
+    line-height: 2rem;
+    @include mobile {
+      float: none;
+      position: static;
+      width: 100%;
+      margin-bottom: 25px;
+      margin-top: 15px;
+    };
+    @include tablet {
+      float: none;
+      position: static;
+      width: 100%;
+      margin-bottom: 25px;
+    };
+  }
+  &__keywords{
+    top: 110px;
+    display: inline-block;
+    position: absolute;
+    float: right;
+    clear: right;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    width: 49.20634921%;
+    @include mobile {
+      float: none;
+      position: static;
+      width: 100%;
+    }
+    @include tablet {
+      float: none;
+      position: static;
+      width: 100%;
+    };
+
+  }
+}

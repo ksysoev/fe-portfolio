@@ -1,0 +1,17 @@
+include ../lots/lots
+ 
+mixin tabs()
+  +b.tabs
+    +e('ul').nav
+      +e('li').tab._status_active 
+        a Предложение
+      +e('li').tab 
+        a(href="#") Спрос
+    +e.contents
+      +e.tabContent._status_active
+        +lots
+        +btn({"label":"больше лотов", "href":"#", "type":"lots"})       
+      +e.tabContent._status_active
+        +lots 
+        +btn({"label":"больше лотов", "href":"#", "type":"lots"}) 
+  // end tabs block

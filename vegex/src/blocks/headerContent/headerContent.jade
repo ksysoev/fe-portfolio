@@ -1,0 +1,17 @@
+include ../btn/btn
+
+mixin headerContent()
+  +b.headerContent
+    +e('a').logo(href="/") Овощная биржа
+    +e.info
+      +e.time Среда, 12.01.2016, 18:26
+      +e.schedule 
+        | Торги 
+        span проводятся 
+        | с 8-16 в будние дни
+      +e.trades Торги открыты
+      // +e.trades._status_close Торги завершены
+    +e.btnGroup
+      +btn({"label":"Вход", "href":"http://torgi.fshb.ru/login", "type":"login"})
+      +btn({"label":"Регистрация", "href":"http://torgi.fshb.ru/register","type":"register"})
+  // end headerContent block

@@ -1,0 +1,130 @@
+.headerContent{
+  vertical-align: bottom;
+  &__logo{
+    display: inline-block;
+    float: left;
+    height: 79px;
+    width: 27.45901639%;
+    padding-left: 79px;
+    box-sizing: border-box;
+    padding-top: 25px;
+    margin-top: 15px;
+    background: url("../images/logo.png") left center no-repeat;
+    color: $logoColor;
+    font: $logoFont;
+    text-decoration: none;
+    text-transform: uppercase;
+    @include mobile {
+      float: none;
+      position: static;
+      width: 100%;
+    }
+    @include tablet {
+      width: 39.47368421%;
+      margin-top: 10px;
+    };
+  }
+  &__info{
+    display: inline-block;
+    width: 47.13114754%;
+    margin-bottom: 30px;
+    @include mobile {
+      width: 100%;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+    @include tablet {
+      width: 31.57894737%;
+      text-align: center;
+      margin-top: 15px;
+    };
+  }
+  &__time{
+    display: none;
+    float:left;
+    color: $timeColor;
+    font: $timeFont;
+    margin-bottom: 10px;
+    margin-top: 28px;
+    width: 70%;
+    @include desktop {
+      display: inline-block;
+    };
+  }
+  &__schedule{
+    float:left;
+    clear: left;
+    color: $workTimeColor;
+    font: $workTimeFont;
+    width: 70%;
+    display: inline-block;
+    @include mobile {
+      float: none;
+      position: static;
+      width: 100%;
+      margin-bottom: 15px;
+      span {
+        display: none;
+      }
+    }
+    @include tablet {
+      width: 100%;
+      span {
+        display: none;
+      }
+    };
+  }
+  &__trades{
+    display: inline-block;
+    text-transform: uppercase;
+    width: 30%;
+    margin-top: 45px;
+    font: $tradeStatusFont;
+    color: $tradeStatusColor;
+    &:nth-of-type(4){
+      margin-top:0;
+    }
+    &_status_close{
+      color: $tradeStatusCloseColor;
+      font-weight: 700;
+    }
+    @include mobile {
+      float: none;
+      position: static;
+      width: 100%;
+      margin: 0;
+    }
+    @include tablet {
+      width: 100%;
+      margin-top: 15px;
+    };
+  }
+  &__btnGroup{
+    float: right;
+    display: inline-block;
+    width: 25%;
+    margin-top: 27px;
+    text-align: right;
+    a{
+      margin-left: 17px;
+      margin-top: 5px;
+      @include mobile {
+        width: 94%;
+        margin: 0 3% 10px 3%;
+      }
+    }
+    a:first-of-type{
+      margin-left: 0;
+      margin-top: 5px;
+    }
+    @include mobile {
+      float: none;
+      position: static;
+      width: 100%;
+      margin-top: 0;
+    }
+    @include tablet {
+      width: 28.94736842%;
+    };
+  }
+}

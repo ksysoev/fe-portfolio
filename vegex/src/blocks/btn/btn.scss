@@ -1,0 +1,46 @@
+.btn{
+    display: inline-block;
+    padding: 5px;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: $buttonColor;
+    background-color: $buttonBGColor;
+    border-bottom:1px solid transparent;
+    border-radius: 4px;
+    font: $buttonFont;
+    transition: all .3s;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    cursor: pointer;
+    &_type_login{
+      width: auto;
+      background: $loginButtonBGColor $loginButtonBGColorFB;
+      border-bottom:1px solid $buttonHoverborder;
+      padding: 8px 15px;
+      &:hover{
+        background: $regButtonBGColor;
+      }
+    }
+    &_type_register{
+      width: auto;
+      background: $regButtonBGColor $regButtonBGColorFB;
+      border-bottom:1px solid $buttonHoverborder;
+      padding: 8px 15px;
+      &:hover{
+        background: $loginButtonBGColor;
+      }
+    }
+    &_type_lots{
+      border-radius: 0 0 4px 4px;
+      padding: 5px 35px 9px 10px;
+      background: url("../images/caret.png") 89% 40% no-repeat, $loginButtonBGColor $loginButtonBGColorFB;
+      width: auto;
+      border-bottom:1px solid $buttonHoverborder;
+      margin-top: -1px;
+      &:hover{
+        background: url("../images/caret.png") 89% 40% no-repeat, $regButtonBGColor;
+      }
+    }
+}

@@ -1,0 +1,28 @@
+.message{
+  position: relative;
+  border: 1px solid $tableBorderColor;
+  border-bottom: 5px solid $tableBottomBorderColor;
+  width: 60%;
+  margin: 0 auto 35px auto;
+  color: $tableColor;
+  box-shadow: 0 2px 10px $tableShadowColor;
+  @include mobile {
+    width: 100%;
+
+  };
+  @include tablet {
+    width: 80%;
+  };
+  &__text{
+    margin: 25px 30px 15px 30px;
+    font: $timeFont;
+  }
+  &__btn{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 2rem;
+    color: $tableColor;
+    cursor: pointer;
+  }
+}

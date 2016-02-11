@@ -1,0 +1,62 @@
+.tabs{
+  &__nav{
+    border-bottom: 2.5px solid $tabUnderlineColor;
+  }
+  &__tab{
+    display: inline-block;
+    width: 49%;
+    border-radius: 4px 4px 0 0;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid $tabBorderColor;
+    border-bottom: none;
+    background: $tabBGColor $tabBGColorFB;
+    padding: 7px 0 4px 0;
+    cursor: pointer;
+    text-transform: uppercase;
+    a{
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: $tabColor;
+      font: $tabFont;
+      text-decoration: none;
+    }
+    @include mobile {
+      width: 62.5%
+    };
+    &:last-of-type{
+      margin-right: 0;
+      float: right;
+      @include mobile {
+          width: 34.375%;
+      };
+      &:hover{
+        background: $tabHoverBGColor;
+      }
+    }
+    &_status_active{
+      background: $regButtonBGColor $tabActiveBGColor;
+      border: 1px solid $tabActiveBGColor;
+      border-bottom: none;
+      a{
+        color: $tabActiveColor;
+      }
+      &:hover{
+        background: $loginButtonBGColor $loginButtonBGColorFB;
+      }
+    }
+  }
+  &__contents{
+    padding-top:32px;
+  }
+  &__tabContent{
+    display: none;
+    padding-bottom: 60px;
+    text-align: center;
+    overflow: hidden;
+      &_status_active{
+        display: block;
+      }
+  }
+}

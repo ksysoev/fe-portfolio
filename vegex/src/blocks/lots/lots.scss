@@ -1,0 +1,183 @@
+.lots{
+  width: 100%;
+  border-collapse: collapse;
+  border-bottom: 5px solid $tableBottomBorderColor;
+  box-shadow: 0 2px 10px $tableShadowColor;
+
+  tr{
+    font-size: 0;
+    @include mobile {
+      border: .5px solid $tableBorderColor;
+    }
+  }
+  td, th{
+    border: .5px solid $tableBorderColor;
+    border-bottom: none;
+    box-sizing: border-box;
+    vertical-align: middle;
+    padding: 10px 5px;
+    @include mobile {
+      border: none;
+      box-sizing: border-box;
+    }
+
+  }
+  &__header{
+    th{
+     font: $tableHeaderFont;
+     background-color: $tableHeaderBGColor;
+     color: $tableHeaderColor;
+     text-transform: uppercase;
+
+     @include mobile {
+       height: 60px;
+     }
+    }
+    .lots__button{
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+  &__content{
+    &:hover{
+      .lots__rates{
+        background: none;
+      }
+    }
+    td {
+      color: $tableColor;
+     font: $tableFont;
+     a:not(.btn){
+       color: $tableColor;
+      font: $tableFont;
+      text-decoration: none;
+      &:hover{
+        text-decoration: underline;
+      }
+     }
+    }
+    tr{
+      transition: background .3s;
+      &:hover{
+        background-color: $tableHoverBGcolor;
+        @include mobile {
+          background: none;
+        }
+        @include tablet {
+          background: none;
+        }
+        .btn{
+          background:$buttonHoverBGColor $buttonHoverBGColorFB;
+          border-bottom:1px solid $buttonHoverborder;
+        }
+      }
+    }
+    .lots__rates{
+      background-color: $tableHoverBGcolor;
+      @include mobile {
+        background: none;
+      }
+    }
+
+  }
+  &__product{
+      text-transform: uppercase;
+      width: 12.46983105%;
+      vertical-align: middle;
+      @include mobile {
+        display: inline-block;
+        width: 46.875%;
+      }
+      @include tablet {
+        width: 39.5256917%;
+      }
+
+      .btn{
+        display: none;
+        @include tablet {
+          width: auto;
+          margin: 0 5px;
+          display: inline-block;
+        }
+      }
+  }
+  &__vendor{
+      text-transform: uppercase;
+      width: 13.27433628%;
+      @include mobile {
+        display: none;
+      }
+      @include tablet {
+        display: none;
+      }
+  }
+  &__quantity{
+    width: 13.6765889%;
+    @include mobile {
+      display: none;
+    }
+    @include tablet {
+      width: 22.00263505%;
+    }
+  }
+  &__min{
+    width: 12.06757844%;
+    @include mobile {
+      display: none;
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+  &__caliber{
+    width: 9.493161706%;
+    @include mobile {
+      display: none;
+    }
+    @include tablet {
+      width: 15.81027668%;
+    }
+  }
+  &__price{
+    width: 9.412711183%;
+    @include mobile {
+      display: inline-block;
+      width: 25%;
+    }
+    @include tablet {
+      width: 13.43873518%;
+    }
+  }
+  &__region{
+    width: 11.50442478;
+    @include mobile {
+      display: none;
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+  &__rates{
+    width: 6.838294449;
+    @include mobile {
+      display: inline-block;
+      width: 28.125%;
+    }
+    @include tablet {
+      width: 9.222661397%;
+    }
+  }
+  &__button{
+    width: 11.26307321%;
+
+    @include mobile {
+      display: block;
+      width: 100%;
+
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+}

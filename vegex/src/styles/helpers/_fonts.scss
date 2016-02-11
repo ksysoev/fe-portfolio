@@ -1,0 +1,247 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic);
+
+//
+// Import Geometria Font
+//
+
+@font-face {
+  font-family: 'Geometria';
+  src: url('../assets/fonts/Geometria/Geometria-BoldItalic.eot');
+  src: url('../assets/fonts/Geometria/Geometria-BoldItalic.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/Geometria/Geometria-BoldItalic.woff2') format('woff2'),
+       url('../assets/fonts/Geometria/Geometria-BoldItalic.woff') format('woff'),
+       url('../assets/fonts/Geometria/Geometria-BoldItalic.ttf') format('truetype'),
+       url('../assets/fonts/Geometria/Geometria-BoldItalic.svg#Geometria-BoldItalic') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* @font-face {
+  font-family: 'Geometria';
+  src: url('../assets/fonts/Geometria/Geometria-ExtraBold.eot');
+  src: url('../assets/fonts/Geometria/Geometria-ExtraBold.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/Geometria/Geometria-ExtraBold.woff2') format('woff2'),
+       url('../assets/fonts/Geometria/Geometria-ExtraBold.woff') format('woff'),
+       url('../assets/fonts/Geometria/Geometria-ExtraBold.ttf') format('truetype'),
+       url('../assets/fonts/Geometria/Geometria-ExtraBold.svg#Geometria-ExtraBold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+} */
+
+/* @font-face {
+  font-family: 'Geometria';
+  src: url('../assets/fonts/Geometria/Geometria-ExtraLight.eot');
+  src: url('../assets/fonts/Geometria/Geometria-ExtraLight.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/Geometria/Geometria-ExtraLight.woff2') format('woff2'),
+       url('../assets/fonts/Geometria/Geometria-ExtraLight.woff') format('woff'),
+       url('../assets/fonts/Geometria/Geometria-ExtraLight.ttf') format('truetype'),
+       url('../assets/fonts/Geometria/Geometria-ExtraLight.svg#Geometria-ExtraLight') format('svg');
+  font-weight: 200;
+  font-style: italic;
+} */
+
+/* @font-face {
+  font-family: 'Geometria';
+  src: url('../assets/fonts/Geometria/Geometria-Heavy.eot');
+  src: url('../assets/fonts/Geometria/Geometria-Heavy.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/Geometria/Geometria-Heavy.woff2') format('woff2'),
+       url('../assets/fonts/Geometria/Geometria-Heavy.woff') format('woff'),
+       url('../assets/fonts/Geometria/Geometria-Heavy.ttf') format('truetype'),
+       url('../assets/fonts/Geometria/Geometria-Heavy.svg#Geometria-Heavy') format('svg');
+  font-weight: 800;
+  font-style: normal;
+} */
+
+/* @font-face {
+  font-family: 'Geometria';
+  src: url('../assets/fonts/Geometria/Geometria-HeavyItalic.eot');
+  src: url('../assets/fonts/Geometria/Geometria-HeavyItalic.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/Geometria/Geometria-HeavyItalic.woff2') format('woff2'),
+       url('../assets/fonts/Geometria/Geometria-HeavyItalic.woff') format('woff'),
+       url('../assets/fonts/Geometria/Geometria-HeavyItalic.ttf') format('truetype'),
+       url('../assets/fonts/Geometria/Geometria-HeavyItalic.svg#Geometria-HeavyItalic') format('svg');
+  font-weight: 800;
+  font-style: italic;
+} */
+
+@font-face {
+  font-family: 'Geometria';
+  src: url('../assets/fonts/Geometria/Geometria-Italic.eot');
+  src: url('../assets/fonts/Geometria/Geometria-Italic.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/Geometria/Geometria-Italic.woff2') format('woff2'),
+       url('../assets/fonts/Geometria/Geometria-Italic.woff') format('woff'),
+       url('../assets/fonts/Geometria/Geometria-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* @font-face {
+  font-family: 'Geometria';
+  src: url('../assets/fonts/Geometria/Geometria-Light.eot');
+  src: url('../assets/fonts/Geometria/Geometria-Light.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/Geometria/Geometria-Light.woff2') format('woff2'),
+       url('../assets/fonts/Geometria/Geometria-Light.woff') format('woff'),
+       url('../assets/fonts/Geometria/Geometria-Light.ttf') format('truetype'),
+       url('../assets/fonts/Geometria/Geometria-Light.svg#Geometria-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+} */
+
+/* @font-face {
+  font-family: 'Geometria';
+  src: url('../assets/fonts/Geometria/Geometria-LightItalic.eot');
+  src: url('../assets/fonts/Geometria/Geometria-LightItalic.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/Geometria/Geometria-LightItalic.woff2') format('woff2'),
+       url('../assets/fonts/Geometria/Geometria-LightItalic.woff') format('woff'),
+       url('../assets/fonts/Geometria/Geometria-LightItalic.ttf') format('truetype'),
+       url('../assets/fonts/Geometria/Geometria-LightItalic.svg#Geometria-LightItalic') format('svg');
+  font-weight: 300;
+  font-style: italic;
+} */
+
+/* @font-face {
+  font-family: 'Geometria';
+  src: url('../assets/fonts/Geometria/Geometria-Medium.eot');
+  src: url('../assets/fonts/Geometria/Geometria-Medium.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/Geometria/Geometria-Medium.woff2') format('woff2'),
+       url('../assets/fonts/Geometria/Geometria-Medium.woff') format('woff'),
+       url('../assets/fonts/Geometria/Geometria-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+} */
+
+/* @font-face {
+  font-family: 'Geometria';
+  src: url('../assets/fonts/Geometria/Geometria-MediumItalic.eot');
+  src: url('../assets/fonts/Geometria/Geometria-MediumItalic.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/Geometria/Geometria-MediumItalic.woff2') format('woff2'),
+       url('../assets/fonts/Geometria/Geometria-MediumItalic.woff') format('woff'),
+       url('../assets/fonts/Geometria/Geometria-MediumItalic.ttf') format('truetype'),
+       url('../assets/fonts/Geometria/Geometria-MediumItalic.svg#Geometria-MediumItalic') format('svg');
+  font-weight: 500;
+  font-style: italic;
+} */
+
+/* @font-face {
+  font-family: 'Geometria';
+  src: url('../assets/fonts/Geometria/Geometria-Thin.eot');
+  src: url('../assets/fonts/Geometria/Geometria-Thin.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/Geometria/Geometria-Thin.woff2') format('woff2'),
+       url('../assets/fonts/Geometria/Geometria-Thin.woff') format('woff'),
+       url('../assets/fonts/Geometria/Geometria-Thin.ttf') format('truetype'),
+       url('../assets/fonts/Geometria/Geometria-Thin.svg#Geometria-Thin') format('svg');
+  font-weight: 100;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: 'Geometria';
+  src: url('../assets/fonts/Geometria/Geometria.eot');
+  src: url('../assets/fonts/Geometria/Geometria.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/Geometria/Geometria.woff2') format('woff2'),
+       url('../assets/fonts/Geometria/Geometria.woff') format('woff'),
+       url('../assets/fonts/Geometria/Geometria.ttf') format('truetype'),
+       url('../assets/fonts/Geometria/Geometria.svg#Geometria') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geometria';
+  src: url('../assets/fonts/Geometria/Geometria-Bold.eot');
+  src: url('../assets/fonts/Geometria/Geometria-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/Geometria/Geometria-Bold.woff2') format('woff2'),
+       url('../assets/fonts/Geometria/Geometria-Bold.woff') format('woff'),
+       url('../assets/fonts/Geometria/Geometria-Bold.ttf') format('truetype'),
+       url('../assets/fonts/Geometria/Geometria-Bold.svg#Geometria-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* @font-face {
+  font-family: 'Geometria';
+  src: url('../assets/fonts/Geometria/Geometria-ExtraBoldItalic.eot');
+  src: url('../assets/fonts/Geometria/Geometria-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/Geometria/Geometria-ExtraBoldItalic.woff2') format('woff2'),
+       url('../assets/fonts/Geometria/Geometria-ExtraBoldItalic.woff') format('woff'),
+       url('../assets/fonts/Geometria/Geometria-ExtraBoldItalic.ttf') format('truetype'),
+       url('../assets/fonts/Geometria/Geometria-ExtraBoldItalic.svg#Geometria-ExtraBoldItalic') format('svg');
+  font-weight: 700;
+  font-style: italic;
+} */
+/*
+@font-face {
+  font-family: 'Geometria';
+  src: url('../assets/fonts/Geometria/Geometria-ThinItalic.eot');
+  src: url('../assets/fonts/Geometria/Geometria-ThinItalic.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/Geometria/Geometria-ThinItalic.woff2') format('woff2'),
+       url('../assets/fonts/Geometria/Geometria-ThinItalic.woff') format('woff'),
+       url('../assets/fonts/Geometria/Geometria-ThinItalic.ttf') format('truetype'),
+       url('../assets/fonts/Geometria/Geometria-ThinItalic.svg#Geometria-ThinItalic') format('svg');
+  font-weight: 100;
+  font-style: italic;
+}
+ */
+/* @font-face {
+  font-family: 'Geometria';
+  src: url('../assets/fonts/Geometria/Geometria-ExtraLightItalic.eot');
+  src: url('../assets/fonts/Geometria/Geometria-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/Geometria/Geometria-ExtraLightItalic.woff2') format('woff2'),
+       url('../assets/fonts/Geometria/Geometria-ExtraLightItalic.woff') format('woff'),
+       url('../assets/fonts/Geometria/Geometria-ExtraLightItalic.ttf') format('truetype'),
+       url('../assets/fonts/Geometria/Geometria-ExtraLightItalic.svg#Geometria-ExtraLightItalic') format('svg');
+  font-weight: 200;
+  font-style: italic;
+} */
+
+//
+// Import Century Gothic Font
+//
+
+@font-face {
+  font-family: 'CenturyGothic';
+  src: url('../assets/fonts/Gothic/CenturyGothic.eot');
+  src: url('../assets/fonts/Gothic/CenturyGothic.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/Gothic/CenturyGothic.woff2') format('woff2'),
+       url('../assets/fonts/Gothic/CenturyGothic.woff') format('woff'),
+       url('../assets/fonts/Gothic/CenturyGothic.ttf') format('truetype'),
+       url('../assets/fonts/Gothic/CenturyGothic.svg#CenturyGothic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CenturyGothic';
+  src: url('../assets/fonts/Gothic/CenturyGothic-BoldItalic.eot');
+  src: url('../assets/fonts/Gothic/CenturyGothic-BoldItalic.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/Gothic/CenturyGothic-BoldItalic.woff2') format('woff2'),
+       url('../assets/fonts/Gothic/CenturyGothic-BoldItalic.woff') format('woff'),
+       url('../assets/fonts/Gothic/CenturyGothic-BoldItalic.ttf') format('truetype'),
+       url('../assets/fonts/Gothic/CenturyGothic-BoldItalic.svg#CenturyGothic-BoldItalic') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'CenturyGothic';
+  src: url('../assets/fonts/Gothic/CenturyGothic-Italic.eot');
+  src: url('../assets/fonts/Gothic/CenturyGothic-Italic.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/Gothic/CenturyGothic-Italic.woff2') format('woff2'),
+       url('../assets/fonts/Gothic/CenturyGothic-Italic.woff') format('woff'),
+       url('../assets/fonts/Gothic/CenturyGothic-Italic.ttf') format('truetype'),
+       url('../assets/fonts/Gothic/CenturyGothic-Italic.svg#CenturyGothic-Italic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'CenturyGothic';
+  src: url('../assets/fonts/Gothic/CenturyGothic-Bold.eot');
+  src: url('../assets/fonts/Gothic/CenturyGothic-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/Gothic/CenturyGothic-Bold.woff2') format('woff2'),
+       url('../assets/fonts/Gothic/CenturyGothic-Bold.woff') format('woff'),
+       url('../assets/fonts/Gothic/CenturyGothic-Bold.ttf') format('truetype'),
+       url('../assets/fonts/Gothic/CenturyGothic-Bold.svg#CenturyGothic-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}

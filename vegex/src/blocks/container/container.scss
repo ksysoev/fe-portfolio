@@ -1,0 +1,11 @@
+.container{
+  width: 100%;
+  box-sizing: border-box;
+  @include desktop {
+    padding: 0 0.78125%;
+  };
+  @include wideDesktop {
+    margin: 0 auto;
+     width: $desktopWidth;
+  };
+}

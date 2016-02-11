@@ -1,0 +1,12 @@
+extends ../blocks/default-layout/default-layout
+include ../blocks/tabs/tabs
+include ../blocks/message/message
+
+block head
+  - var pageTitle = 'Овощная биржа';
+
+
+block content
+  // +message("Для просмотра подробной информации о лоте, необходимо войти в систему")
+  // +message("Для того, чтобы сделать ставку, необходимо войти в систему")
+  +tabs

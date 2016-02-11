@@ -1,0 +1,47 @@
+.social{
+  display: inline-block;
+  float: left;
+  clear: left;
+  width: 26%;
+  box-sizing: border-box;
+  font-size: 0;
+  @include mobile {
+    height: 50px;
+    border-top: 1px solid $tabBorderColor;
+    border-bottom: 1px solid $tabBorderColor;
+    width: 100%;
+    padding-top: 12px;
+    text-align: center;
+  };
+  @include tablet {
+    width: 27%;
+    clear: none;
+    float: right;
+    text-align: right;
+    padding-right: 0;
+    margin-top: 15px
+  };
+  &__item{
+    display: inline-block;
+    margin-right: 7px;
+    @include mobile {
+      margin: 0 12px;
+    };
+    &:last-of-type{
+      margin-right: 0;
+    }
+  }
+  &__link{
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: $socialBGColor;
+    color: $socialColor;
+    display: block;
+    font-size: 1.5rem;
+    i {
+      width: 2.5rem;
+      line-height: 2.5rem;
+      text-align: center;
+    }
+  }
+}
