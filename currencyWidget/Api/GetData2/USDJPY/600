@@ -1,0 +1,83 @@
+{
+  "price": {
+    "last": "3.1328",
+    "change": "-0.0041 (-0.36%)",
+    "dir": "none",
+    "class": "neutralFont"
+  },
+  "sum": {
+    "action": "Strong Buy",
+    "class": "buy",
+    "action_ma": "Strong Buy",
+    "ma_class": "greenFont",
+    "tech_class": "neutralFont",
+    "action_tech": "Strong Buy",
+    "buys_ma": "12",
+    "sells_ma": "0",
+    "buys_tech": "200",
+    "sells_tech": "0"
+  },
+  "mas": [{
+    "name": "MA5",
+    "val_ema": 1.1323,
+    "val_sma": 1.1323,
+    "act_ema": "Buy",
+    "act_sma": "Buy"
+  }, {
+    "name": "MA10",
+    "val_ema": 1.1319,
+    "val_sma": 1.1311,
+    "act_ema": "Sell",
+    "act_sma": "Neutral"
+  }, {
+    "name": "MA20",
+    "val_ema": 1.1302,
+    "val_sma": 1.1302,
+    "act_ema": "Buy",
+    "act_sma": "Buy"
+  }, {
+    "name": "MA50",
+    "val_ema": 1.1274,
+    "val_sma": 1.1274,
+    "act_ema": "Neutral",
+    "act_sma": "Buy"
+  }, {
+    "name": "MA100",
+    "val_ema": 1.1229,
+    "val_sma": 1.1229,
+    "act_ema": "Sell",
+    "act_sma": "Buy"
+  }, {
+    "name": "MA200",
+    "val_ema": 1.1146,
+    "val_sma": 1.1146,
+    "act_ema": "Buy",
+    "act_sma": "Buy"
+  }],
+  "techs": [{
+    "title": "RSI(14)",
+    "val": 57,
+    "action": "Buy"
+  }, {
+    "title": "Stoch(9,6)",
+    "val": 62.65,
+    "action": "Neutral"
+  }, {
+    "title": "RSISTOCH",
+    "val": 0,
+    "action": "Neutral"
+  }, {
+    "title": "MACD(12,26,9)",
+    "val": 0.00176,
+    "action": "Neutral"
+  }, {
+    "title": "Fish(0.5,0.5)",
+    "val": 0.56,
+    "action": "Neutral"
+  }, {
+    "title": "ROC(13)",
+    "val": 0.00178,
+    "action": "Sell"
+  }],
+  "time": "2016-02-11 06:31:41 GMT"
+}

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>currency widget</title>
+  <style>
+    /* Reset Css */
+    a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+  </style>
+  <style>
+  .currencyWidget {
+      margin: 20px;
+      width: 300px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .currencyPair {
+      width: 90%;
+      height: 35px;
+      margin: 15px 5%;
+    }
+    /*Status block*/
+    .currencyStatus{
+      display: block;
+      margin-bottom: 10px;
+      height: 22px;
+    }
+    .currencyStatus__arrow{
+      display: inline-block;
+      width: 17%;
+      height: 22px;
+      text-align: center;
+    }
+    .currencyStatus__arrow svg{
+      height: 22px;
+      transition: all .4s;
+      fill: #ffffff;
+    }
+    .currencyStatus__last{
+      display: inline-block;
+      width: 30%;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .currencyStatus__change{
+      display: inline-block;
+      width: 50%;
+      font-size: 14px;
+      transition: all .4s;
+    }
+    .redFont .currencyStatus__change{
+      color: #d94141;
+    }
+    .redFont .currencyStatus__arrow svg{
+      fill: #d94141;
+    }
+
+    .greenFont .currencyStatus__change{
+      color: #0ea600;
+    }
+    .greenFont .currencyStatus__arrow svg {
+      fill: #0ea600;
+      -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+    }
+    .neutralFont .currencyStatus__change{
+      color: #808080;
+    }
+    .neutralFont .currencyStatus__arrow svg {
+      fill: #ffffff;
+      -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+    }
+    /*Time block*/
+    .currencyTime{
+      color: #808080;
+      font-size: 14px;
+      width: 100%;
+      padding: 5px 15px;
+      border: 1px solid #dadada;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+    /*timeFrames  block*/
+    .timeFrames{
+      width: 100%;
+    }
+    .timeFrames input{
+      display: none;
+    }
+    .timeFrames li {
+      display: inline-block;
+      width: 25%;
+    }
+    .timeFrames__tab {
+      display: block;
+      box-sizing: border-box;
+      background-color: #fff;
+      color: #1256A0;
+      font-size: 14px;
+      text-align: center;
+      font-weight: bold;
+      height: 14px;
+      line-height: 14px;
+      height: 16px;
+      border-right: 1px solid #dadada;
+      border-bottom: 1px solid #dadada;
+    }
+    .timeFrames__tab:last-of-type{
+      border-right:none;
+    }
+    input:checked + label.timeFrames__tab
+    {
+      border: 1px solid #bababa;
+      border-top: 2px solid #20538a;
+      border-bottom: none;
+      color: #333;
+      height: 22px;
+      line-height: 21px;
+    }
+    /*currencyinfo  block*/
+    .currencyinfo{
+      margin-bottom: 20px;
+    }
+    .currencyinfo__row{
+      width: 100%;
+      border: 1px solid #dadada;
+      border-top: 0;
+      padding: 6px 7px 7px 9px;
+      box-sizing: border-box;
+    }
+    .currencyinfo__label{
+          font-weight: bold;
+          font-size:12px;
+
+    }
+    .currencyinfo__sumValue,
+    .currencyinfo__maValue,
+    .currencyinfo__techValue
+    {
+      float: right;
+      color: #fff;
+      padding: 2px 12px;
+      border-radius: 9px;
+      text-transform: uppercase;
+      font-size: 12px;
+      transition: backgrpund .3s;
+    }
+    .currencyinfo__sumValue.sell,
+    .currencyinfo__maValue.redFont,
+    .currencyinfo__techValue.redFont{
+      background: #d94141;
+    }
+    .currencyinfo__sumValue.buy,
+    .currencyinfo__maValue.greenFont,
+    .currencyinfo__techValue.greenFont{
+      background: #0ea600;
+    }
+    .currencyinfo__sumValue.neutral,
+    .currencyinfo__maValue.neutralFont,
+    .currencyinfo__techValue.neutralFont{
+      background: #808080;
+    }
+    /*currencyDetails  block*/
+    .currencyDetails {
+      width: 100%;
+
+    }
+    .currencyDetails input {
+      display: none;
+    }
+    .currencyDetails__tabContent{
+      display: none;
+    }
+    .currencyDetails__tab {
+      display: inline-block;
+      width: 50%;
+      box-sizing: border-box;
+      background-color: #fff;
+      color: #1256A0;
+      width: 50%;
+      font-size: 14px;
+      text-align: center;
+      font-weight: bold;
+      height: 14px;
+      line-height: 14px;
+      height: 16px;
+      border-bottom: 1px solid #dadada;
+
+
+    }
+    input:checked:nth-of-type(1) ~ label.currencyDetails__tab:nth-of-type(1),
+    input:checked:nth-of-type(2) ~ label.currencyDetails__tab:nth-of-type(2)
+    {
+      border: 1px solid #bababa;
+      border-top: 2px solid #20538a;
+      border-bottom: none;
+      color: #333;
+      height: 22px;
+      line-height: 21px;
+    }
+    input:nth-of-type(1):checked ~ .currencyDetails__contents .currencyDetails__tabContent:nth-of-type(1),
+    input:nth-of-type(2):checked ~ .currencyDetails__contents .currencyDetails__tabContent:nth-of-type(2){
+        display: block;
+    }
+    .currencyDetails__row{
+      width: 100%;
+      border: 1px solid #dadada;
+      border-top: none;
+      height: 45px;
+      box-sizing: border-box;
+    }
+    .currencyDetails__tabContent:nth-of-type(2) .currencyDetails__row, .currencyDetails__row:last-of-type{
+      padding-top: 12px;
+    }
+    .currencyDetails__label{
+      display: inline-block;
+      width: 50%;
+      font-weight: bold;
+      font-size:12px;
+      line-height: 20px;
+      height: 20px;
+      text-align: center;
+    }
+    .currencyDetails__values{
+      display: inline-block;
+      width: 50%;
+      vertical-align: middle;
+      text-align: center;
+    }
+    .currencyDetails__value{
+      display: inline-block;
+      margin: 5px 3%;
+      font-size:12px;
+      width: 44%;
+      box-sizing: border-box;
+      text-align: right;
+    }
+    .currencyDetails__act{
+      margin: 5px 5% 5px 0;
+      display: inline-block;
+      width: 45%;
+      font-weight: bold;
+      font-size: 12px;
+      box-sizing: border-box;
+      text-align: left;
+    }
+    .currencyDetails__act.sell, .currencyDetails__sumAct .sell{
+      color: #d94141;
+    }
+    .currencyDetails__act.buy, .currencyDetails__sumAct .buy{
+      color: #0ea600;
+    }
+    .currencyDetails__act.neutral{
+      color: #808080;
+    }
+    .currencyDetails__sumAct{
+      font-weight: bold;
+      font-size: 14px;
+      padding: 7px 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="currencyWidget">
+    <select class="currencyPair" name="currencyPair">
+      <option value="EURUSD">EUR/USD</option>
+      <option value="GBPUSD">GBP/USD</option>
+      <option value="USDCAD">USD/CAD</option>
+      <option value="USDCHF">USD/CHF</option>
+      <option value="USDJPY">USD/JPY</option>
+    </select>
+    <div class="currencyStatus">
+      <div class="currencyStatus__arrow">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        	 viewBox="0 0 293.649 293.649" style="enable-background:new 0 0 293.649 293.649;" xml:space="preserve">
+          <path d="M252.469,153.155c-2.52-5.141-7.745-8.399-13.47-8.399h-35.347V15c0-8.284-6.716-15-15-15h-83.656c-8.284,0-15,6.716-15,15
+	        v129.756H54.65c-5.725,0-10.95,3.259-13.47,8.399c-2.52,5.141-1.893,11.267,1.615,15.791L134.97,287.84
+	        c2.841,3.665,7.218,5.81,11.855,5.81s9.014-2.145,11.854-5.81l92.175-118.894C254.362,164.422,254.989,158.296,252.469,153.155z"/>
+      </div><div class="currencyStatus__last">
+      </div><div class="currencyStatus__change"></div>
+    </div>
+    <div class="currencyTime"></div>
+    <div class="timeFrames">
+      <ul>
+        <li><input type="radio" id="tf1" name="currencyTimeFrame" checked value="60"><label class="timeFrames__tab" for="tf1">1 min</label></li><li>
+        <input type="radio" id="tf5"  name="currencyTimeFrame" value="300"><label class="timeFrames__tab"  for="tf5">5 mins</label></li><li>
+        <input type="radio" id="tf10"  name="currencyTimeFrame" value="600"><label for="tf10" class="timeFrames__tab">10 mins</label></li><li>
+        <input type="radio" id="tf30"  name="currencyTimeFrame" value="1800"><label for="tf30" class="timeFrames__tab">30 mins</label></li>
+      </ul>
+    </div>
+    <div class="currencyinfo">
+      <div class="currencyinfo__row">
+        <span class="currencyinfo__label">Summary:</span>
+        <span class="currencyinfo__sumValue"></span>
+      </div>
+      <div class="currencyinfo__row">
+        <span class="currencyinfo__label">Moving Avarage:</span>
+        <span class="currencyinfo__maValue "></span>
+      </div>
+      <div class="currencyinfo__row">
+        <span class="currencyinfo__label">Tech. Indicators:</span>
+        <span class="currencyinfo__techValue "></span>
+      </div>
+    </div>
+    <div class="currencyDetails">
+      <input type="radio" name="currencyDetails" id="currencyDetails__mas" value="" checked="">
+      <input type="radio" name="currencyDetails" id="currencyDetails__techs" value="">
+      <label class="currencyDetails__tab" for="currencyDetails__mas">Moving Avarage
+      </label><label class="currencyDetails__tab" for="currencyDetails__techs">Tech. Indicators</label>
+      </ul>
+      <ul class="currencyDetails__contents">
+        <li class="currencyDetails__tabContent">
+          <div class="currencyDetails__row">
+            <div class="currencyDetails__label">
+            </div><div class="currencyDetails__values">
+              <div class="currencyDetails__value">
+              </div><div class="currencyDetails__act"></div>
+              <div class="currencyDetails__value">
+              </div><div class="currencyDetails__act"></div>
+            </div>
+          </div>
+          <div class="currencyDetails__row">
+            <div class="currencyDetails__label">
+            </div><div class="currencyDetails__values">
+              <div class="currencyDetails__value">
+              </div><div class="currencyDetails__act"></div>
+              <div class="currencyDetails__value">
+              </div><div class="currencyDetails__act"></div>
+            </div>
+          </div>
+          <div class="currencyDetails__row">
+            <div class="currencyDetails__label">
+            </div><div class="currencyDetails__values">
+              <div class="currencyDetails__value">
+              </div><div class="currencyDetails__act"></div>
+              <div class="currencyDetails__value">
+              </div><div class="currencyDetails__act "></div>
+            </div>
+          </div>
+          <div class="currencyDetails__row">
+            <div class="currencyDetails__label">
+            </div><div class="currencyDetails__values">
+              <div class="currencyDetails__value">
+              </div><div class="currencyDetails__act currencyDetails_color_green"></div>
+              <div class="currencyDetails__value">
+              </div><div class="currencyDetails__act currencyDetails_color_red"></div>
+            </div>
+          </div>
+          <div class="currencyDetails__row">
+            <div class="currencyDetails__label">
+            </div><div class="currencyDetails__values">
+              <div class="currencyDetails__value">
+              </div><div class="currencyDetails__act currencyDetails_color_green"></div>
+              <div class="currencyDetails__value">
+              </div><div class="currencyDetails__act currencyDetails_color_red"></div>
+            </div>
+          </div>
+          <div class="currencyDetails__row">
+            <div class="currencyDetails__label">
+            </div><div class="currencyDetails__values">
+              <div class="currencyDetails__value">
+              </div><div class="currencyDetails__act currencyDetails_color_green"></div>
+              <div class="currencyDetails__value">
+              </div><div class="currencyDetails__act currencyDetails_color_red"></div>
+            </div>
+          </div>
+          <div class="currencyDetails__row">
+            <div class="currencyDetails__sumAct">
+              <span class="buy">Buy</span>: <span class="currencyDetails__buyValue"></span>
+              <span class="sell">Sell</span>: <span class="currencyDetails__sellValue"></span></div>
+          </div>
+        </li>
+        <li class="currencyDetails__tabContent">
+          <div class="currencyDetails__row">
+            <div class="currencyDetails__label">
+            </div><div class="currencyDetails__values">
+              <div class="currencyDetails__value">
+              </div><div class="currencyDetails__act"></div>
+            </div>
+          </div>
+          <div class="currencyDetails__row">
+            <div class="currencyDetails__label">
+            </div><div class="currencyDetails__values">
+              <div class="currencyDetails__value">
+              </div><div class="currencyDetails__act"></div>
+            </div>
+          </div>
+          <div class="currencyDetails__row">
+            <div class="currencyDetails__label">
+            </div><div class="currencyDetails__values">
+              <div class="currencyDetails__value">
+              </div><div class="currencyDetails__act"></div>
+            </div>
+          </div>
+          <div class="currencyDetails__row">
+            <div class="currencyDetails__label">
+            </div><div class="currencyDetails__values">
+              <div class="currencyDetails__value">
+              </div><div class="currencyDetails__act"></div>
+            </div>
+          </div>
+          <div class="currencyDetails__row">
+            <div class="currencyDetails__label">
+            </div><div class="currencyDetails__values">
+              <div class="currencyDetails__value">
+              </div><div class="currencyDetails__act"></div>
+            </div>
+          </div>
+          <div class="currencyDetails__row">
+            <div class="currencyDetails__label">
+            </div><div class="currencyDetails__values">
+              <div class="currencyDetails__value">
+              </div><div class="currencyDetails__act"></div>
+            </div>
+          </div>
+          <div class="currencyDetails__row">
+            <div class="currencyDetails__sumAct">
+              <span class="buy">Buy</span>: <span class="currencyDetails__buyValue"></span>
+              <span class="sell">Sell</span>: <span class="currencyDetails__sellValue"></span></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Scripts -->
+  <script src="https://yastatic.net/jquery/2.2.0/jquery.min.js" charset="utf-8"></script>
+  <script src="js/app.js" charset="utf-8"></script>
+</body>
+
+</html>
