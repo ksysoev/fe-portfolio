@@ -17,8 +17,8 @@ mixin lots()
       each val in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
         tr
           +e('td').product 
-            a(href="http://torgi.fshb.ru/login") Лук репчатый
-            +btn({"label":"Сделать ставку", "location":"lots", "href":"http://torgi.fshb.ru/login"})
+            a(href="#") Лук репчатый
+            +btn({"label":"Сделать ставку", "location":"lots", "href":"#"})
           +e('td').vendor  Пархоменко А.М.
           +e('td').quantity 20 000
           +e('td').min 200
@@ -27,6 +27,6 @@ mixin lots()
           +e('td').region Волгоградская обл.
           +e('td').rates 35
           +e('td').button  
-            +btn({"label":"Сделать ставку", "location":"lots", "href":"http://torgi.fshb.ru/login"})
+            +btn({"label":"Сделать ставку", "location":"lots", "href":"#"})
   // end lots block
          
