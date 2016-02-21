@@ -24,7 +24,7 @@
 	width: 980px;
 	margin: 0 auto;
 	@include box-shadow(0 0 3px rgba(0,0,0,.22));
-	background: url("../images/container_bg.png") #ece9d6;
+	background: image-url("container_bg.png") #ece9d6;
 }
 
 
@@ -54,14 +54,14 @@
 		height: 100%;
 		@each $social in fb, tw, dr, ab {
 			&_type_#{$social}{
-				background: url("../images/social__icon_#{$social}.png")
+				background: image-url("social__icon_#{$social}.png")
 			}
 		}
 	}
 }
 
 .logo{
-	background: url("../images/Halftone.png") 50% 50% no-repeat;
+	background: image-url("Halftone.png") 50% 50% no-repeat;
 	width: 942px;
 	height: 183px;
 	display: block;
