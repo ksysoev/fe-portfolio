@@ -1,0 +1,19 @@
+@keyframes  slider__item_fadeOut {
+    from {
+    	transform: translateX(0);
+    	z-index: 0;
+    }
+    to {transform: translateX(-100%);
+    	z-index: 0;}
+} 
+
+@keyframes  slider__item_fadeIn {
+    from {
+    	transform: translateX(100%);
+    	z-index: 1;
+    }
+    to {
+    	transform: translateX(0);
+    	z-index: 1;
+    }
+} 
