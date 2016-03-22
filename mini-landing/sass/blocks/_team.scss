@@ -1,0 +1,115 @@
+.team {
+  z-index: 0;
+  width: 100%;
+  position: relative;
+  &__bg {
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    transform: skewY(-3deg);
+    position: absolute;
+  }
+  &__staff {
+    @include span(12);
+    margin-top: 150px;
+    @include breakpoint(laptop) {
+      margin-top: 60px
+    }
+    @include breakpoint(laptop) {
+      margin-top: 30px
+    }
+
+    @include breakpoint(phablet) {
+      margin-top: 20px
+    }
+    @include breakpoint(mobileonly) {
+      margin-top: 15px
+    }
+  }
+}
+
+.worker {
+  @include span(3);
+  text-align: center;
+  border-top: 4px solid transparent;
+  padding: 25px 1.7% 30px 1.7%;
+  box-sizing: border-box;
+  transition: all .2s ease-in;
+  &:hover {
+    border-color: #f39c12;
+    background-color: #f0f0f0;
+    .worker__position::after {
+      background-color: #e64c3c;
+    }
+  }
+  &:last-of-type {
+    @include last;
+  }
+  &__photo {
+    display: inline-block;
+    position: relative;
+    width: 86%;
+    padding-top: 86%;
+    border: 1px solid #e5e5e5;
+    border-radius: 50%;
+    @include background-clip(padding-box);
+    background-color: #f1f1f1;
+    img {
+      top: 2.5%;
+      left: 2.5%;
+      position: absolute;
+      width: 95%;
+      height: 95%;
+      border-radius: 50%;
+      @include background-clip(padding-box);
+    }
+  }
+  &__name {
+    color: #0c0c0c;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 28px;
+  }
+  &__position {
+    font-family: $Lato;
+    font-size: 15px;
+    margin-top: 5px;
+    &:after {
+      content: '';
+      display: block;
+      margin: 10px auto;
+      width: 20px;
+      height: 4px;
+      background-color: #cbcbcb;
+      transition: all .2s ease-in;
+    }
+  }
+  &__description {
+    color: #727272;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  @include breakpoint(laptop) {
+      @include span(4);
+      @include push(1);
+      &:nth-of-type(2n){
+				@include push(2);
+				float: left
+      }
+    }
+    @include breakpoint(phablet) {
+      @include span(6);
+      @include push(0);
+      &:nth-of-type(2n){
+				@include push(0);
+				@include last;
+      }
+    }
+    @include breakpoint(mobileonly) {
+      @include span(12);
+    }
+
+}

@@ -1,0 +1,49 @@
+@keyframes  slider__item_fadeIn {
+    from {
+        transform: rotateY(0);
+        transform-origin: 50% 50% -300px;
+        z-index: 0;
+    }
+    to {transform: rotateY(-180deg);
+        transform-origin: 50% 50% -300px;
+        z-index: 0;}
+} 
+
+@keyframes  slider__item_fadeOut {
+    from {
+        transform: rotateY(180deg);
+        transform-origin: 50% 50% -300px;
+        z-index: 1;
+    }
+    to {
+        transform: rotateY(0);
+        transform-origin: 50% 50% -300px;
+        z-index: 1;
+    }
+} 
+
+
+@keyframes  slider__item_location_portfolio_fadeIn {
+    from {
+        transform: rotateX(0);
+        transform-origin: 50% 50% -1px;
+        z-index: 0;
+    }
+    to {transform: rotateX(-180deg);
+        transform-origin: 50% 50% -300px;
+        z-index: 0;}
+} 
+
+@keyframes  slider__item_location_portfolio_fadeOut {
+    from {
+        transform: rotateX(180deg);
+        transform-origin: 50% 50% -1px;
+        z-index: 1;
+    }
+    to {
+        transform: rotateX(0);
+        transform-origin: 50% 50% -300px;
+        z-index: 1;
+    }
+} 
+

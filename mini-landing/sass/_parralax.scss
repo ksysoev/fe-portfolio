@@ -1,0 +1,28 @@
+  .parallax {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+    position: static;
+  }
+  .parallax__group {
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .parallax__layer--base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  .parallax__layer--back {
+    -webkit-transform: translateZ(-300px) scale(2.01);
+    transform: translateZ(-300px) scale(2.01);
+  }

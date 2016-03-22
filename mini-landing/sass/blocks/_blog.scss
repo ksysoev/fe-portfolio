@@ -1,0 +1,148 @@
+.blog {
+  z-index: 0;
+  width: 100%;
+  position: relative;
+
+  &__bg {
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    transform: skewY(-3deg);
+    position: absolute;
+  }
+  &__timeline {
+    margin-top: 90px;
+  }
+}
+.post {
+  @include span(6);
+  font-size: 0;
+  color: #727272;
+  padding-right: 1%;
+  margin-top: 60px;
+  box-sizing: border-box;
+
+  &:nth-of-type(even) {
+    @include last;
+    padding-left: 1%;
+    padding-right: 0;
+
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+  &__imageBox {
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 54%;
+  }
+  &__img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &__heading {
+    color: #0c0c0c;
+    height: 60px;
+    max-width: 75%;
+    line-height: 60px;
+    background-color: #FFF;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    padding-left: 3.5%;
+    padding-right: 5.5%;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+
+    &:before {
+      content: '';
+      width: 44px;
+      height: 44px;
+      background-color: #f39b12;
+      position: absolute;
+      left: -44px;
+      bottom: 0;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+    }
+    @each $label in image video audio {
+      &_type_#{$label}{
+        &:after {
+          @include icons-sprite($label);
+          width: icons-sprite-width($label);
+          height: icons-sprite-height($label);
+          left: -22px - icons-sprite-width($label) / 2;
+          bottom: 22px - icons-sprite-height($label) / 2;
+        }
+      }
+    }
+  }
+  &__info {
+    font-size: 14px;
+
+    li {
+      text-align: right;
+    }
+  }
+  &__desc {
+    font-size: 16px;
+  }
+  &__leftCol, &__rightCol {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+  }
+  &__leftCol {
+    width: 20%;
+    padding-right: 3.5%;
+  }
+  &__rightCol {
+    width: 80%;
+    padding-left: 3.5%;
+  }
+
+  @include breakpoint(laptop){
+    &__heading {
+      font-size: 15px;
+    }
+    &__leftCol {
+    width: 30%;
+    padding-right: 3.5%;
+  }
+  &__rightCol {
+    width: 70%;
+    padding-left: 3.5%;
+  }
+  }
+  @include breakpoint(tablet){
+    @include span(12);
+  }
+  @include breakpoint(phablet){
+    &__heading {
+      height: 54px;
+      line-height: 54px;
+      font-size: 18px;
+    }
+  }
+  @include breakpoint(mobileonly){
+    &__heading {
+      height: 48px;
+      line-height: 48px;
+      font-size: 16px;
+
+    }
+  }
+}

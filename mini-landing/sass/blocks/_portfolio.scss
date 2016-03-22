@@ -1,0 +1,156 @@
+.portfolio{
+	z-index: 0;
+	width: 100%;
+	position: relative;
+	&__bg{
+		z-index: -1;
+		width: 100%;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: #ffffff;
+		transform: skewY(-3deg);
+		position: absolute;
+
+	}
+}
+
+.gallery{
+	line-height: 30px;
+	font-size: 14px;
+	&__tags{
+		margin-bottom: 80px;
+		text-align: center;
+
+	}
+	&__tag{
+		display: inline-block;
+		margin-right: 20px;
+		&:after{
+			content: '\\\\';
+			margin-left: 20px;
+			color: #a6a6a6;
+		}
+		&:last-of-type{
+			margin-right: 0;
+			&:after{
+				content:'';
+				margin-left: 0;
+			}
+		}
+	}
+	&__link{
+		color: #0d0d0d;
+		
+		font-weight: bold;
+		text-decoration: none;
+		&_status_active, &:hover{
+			color: #f29b12;
+		}
+		&_status_active{
+			cursor: default;
+		}
+
+	}
+	&__items{
+		font-size:0;
+	}
+	&__item{
+		width: 25%;
+		display: inline-block;
+
+	}
+	@include breakpoint(tablet) {
+		&__tag:after{
+			content: '';
+			margin-left: 0;
+		}
+	}
+ @include breakpoint(phablet) {
+ 	&__item{
+		width: 50%;
+	}
+ }
+ @include breakpoint(mobileonly) {
+  &__item{
+		width: 100%;
+	}
+ }
+}
+
+.galleryItem{
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	&__imageBox{
+		position: relative;
+		background: white;
+		&:before{
+			content:'';
+			background-color: #f39c12;
+			opacity: .5; 
+			position: absolute;
+			width: 0;
+			height: 0;
+			top: 50%;
+    		left: 50%;
+			transition: all .2s;
+			border-radius: 50%;
+		}
+		&:after{
+			content:'';
+			position: absolute;
+			top: 50%;
+    		left: 50%;	
+			@include icons-sprite(plus);
+			width: icons-sprite-width(plus);
+			height: icons-sprite-height(plus);
+			margin-left: 0px - icons-sprite-width(plus) / 2px;
+			margin-top: 0px  - icons-sprite-height(plus) / 2px;
+			opacity: 0;
+			transition: all .2s;
+		}
+	}
+	&__image{
+		width: 100%;
+		transition: all .2s;
+	}
+	&__name{
+		margin-top: 20px;
+		color: #0c0c0c;
+		font-size: 15px;
+		font-weight: bold;
+		text-transform:uppercase;
+	}
+	&__label{
+		margin-top: 10px;
+		margin-bottom: 25px;
+		color: #8c8c8c;
+		font-size: 14px;
+	}
+	&:hover{
+		.galleryItem__name{
+			color: #f39c12;
+		}
+		.galleryItem__imageBox{
+			&:before{
+				width: 98px;
+				height: 98px;
+				margin-top: -49px;
+    			margin-left: -49px;
+			}
+			&:after{
+				opacity: 1;
+			}
+		}
+		.galleryItem__image{
+			opacity: 0.5;
+		}
+	}
+	@include breakpoint(mobileonly) {
+  	&__name{
+			margin-top: 10px;
+		}
+	}
+}

@@ -1,0 +1,200 @@
+.about {
+  z-index: 0;
+  width: 100%;
+  position: relative;
+  &__bg {
+    z-index: -1;
+    width: 100%;
+    background: #ffffff;
+    transform: skewY(-3deg);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  &__block {
+    display: inline-block;
+    position: relative;
+    padding-left: 150px;
+    box-sizing: border-box;
+    &:before {
+      content: '';
+      position: absolute;
+    }
+    &:after {
+      content: '';
+      width: 121px;
+      height: 121px;
+      position: absolute;
+      border: 2px solid #f39b12;
+      border-radius: 50%;
+      left: 0px;
+      top: 0; 
+      
+    }
+    &_type_bulb {
+      @include span(7);
+      &:before {
+        @include icons-sprite(bulb);
+        width: icons-sprite-width(bulb);
+        height: icons-sprite-height(bulb);
+        left: 62.5px - icons-sprite-width(bulb) / 2px;
+        top: 62.5px - icons-sprite-height(bulb) / 2px;
+        @include breakpoint(phablet) {
+       }
+      }
+      @include breakpoint(laptop) {
+        padding: 150px 0 0 0;
+        @include span(6);
+        &:after{
+          left:50%;
+          margin-left: -62.5px;
+        }
+        &:before{
+          left:50%;
+          margin-left: 0px - icons-sprite-width(bulb) / 2px;
+        }
+      }
+      @include breakpoint(phablet) {
+        @include span(12);
+        
+        margin-top: 25px;
+      }
+    }
+    &_type_params {
+      @include span(6);
+      @include last;
+       margin-bottom: 40px;
+      &:before {
+        @include icons-sprite(params);
+        width: icons-sprite-width(params);
+        height: icons-sprite-height(params);
+        left: 62.5px - icons-sprite-width(params) / 2px;
+        top: 62.5px - icons-sprite-height(params) / 2px;
+      }
+      @include breakpoint(laptop) {
+        padding: 150px 0 0 0;
+        &:after{
+          left:50%;
+          margin-left: -62.5px;
+        }
+        &:before{
+          left:50%;
+          margin-left: 0px - icons-sprite-width(params) / 2px;
+        }
+      }
+      @include breakpoint(phablet) {
+        @include span(12);
+        
+        margin-top: 25px;
+      }
+    }
+  }
+  &__heading {
+    color: #0c0c0c;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 25px;
+     @include breakpoint(laptop) {
+        text-align: center;
+       }
+  }
+  &__text {
+    color: #727272;
+    font-size: 16px;
+     @include breakpoint(laptop) {
+        text-align: justify;
+       }
+    &_color_red {
+      color: #e74c3c;
+      font-size: 20px;
+      font-weight: 300;
+      margin-bottom: 35px;
+    }
+  }
+  &__img {
+    box-sizing: border-box;
+    display: inline-block;
+    &_position_right {
+      @include span(5);
+      @include last;
+      @include breakpoint(laptop) {
+        margin-top: 150px;
+        @include span(6);
+        @include last;
+      }
+      @include breakpoint(phablet) {
+        @include span(12);
+        margin-top: 25px;
+      }
+    }
+    &_position_left {
+      @include span(5);
+      @include breakpoint(phablet) {
+        @include span(12);
+        float: none;
+        margin-top: 25px;
+      }
+    }
+    img {
+      width: 100%;
+      height: auto;
+
+    }
+  }
+  &__skills {
+    margin-top: 40px;
+    @include span(6);
+    @include last;
+    clear: right;
+     @include breakpoint(phablet) {
+        @include span(12);
+        margin-top: 25px;
+        float: none;
+      }
+  }
+}
+
+.skill {
+  color: #0c0c0c;
+  font-size: 16px;
+  margin-top: 10px;
+  &__name {
+    font-weight: 600;
+  }
+  &__value {
+    font-weight: 300;
+    &:before {
+      content: '/';
+      margin: 0 3.5px;
+    }
+    &:after {
+      content: '%';
+    }
+  }
+ 
+}
+
+.progressBar {
+  width: 100%;
+  height: 10px;
+  background-color: #e5e5e5;
+  margin-top: 14px;
+  &__value {
+    height: 10px;
+    background-color: #f39b11;
+    &_type_design {
+      width: 88%;
+    }
+    &_type_dev {
+      width: 76%;
+    }
+    &_type_wp {
+      width: 81%;
+    }
+    &_type_drupal {
+      width: 71%;
+    }
+  }
+}

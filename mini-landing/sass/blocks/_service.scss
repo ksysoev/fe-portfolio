@@ -1,0 +1,237 @@
+.service{
+	z-index: 0;
+	width: 100%;
+	position: relative;
+	&__bg{
+		z-index: -1;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: #ffffff;
+		transform: skewY(-3deg);
+		position: absolute;
+	}
+	&__list{
+		margin-top: 60px;
+	}
+	&__block{
+		@include span(4);
+		text-align: left;
+		position: relative;
+		padding-top: 150px;
+
+		&:before{
+			content:'';
+			width: 121px;
+			height: 121px;
+			border: 2px solid #f39b12;
+			border-radius:50%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		&:after{
+			content:'';
+			position: absolute;
+			@include icons-sprite(banknote);
+			width: icons-sprite-width(banknote);
+			height: icons-sprite-height(banknote);
+			left: 62.5 - icons-sprite-width(banknote) / 2;
+			top: 62.5px - icons-sprite-height(banknote) / 2;
+		}
+		@include breakpoint(tablet) {
+	    	@include span(12);
+	    	text-align: center;
+	    	&:before{
+	    		left: 50%;
+	    		margin-left: -62.5px;
+	    	}
+	    	&:after{
+	    		left: 50%;
+	    		margin-left: 0px - icons-sprite-width(banknote) / 2;
+	    	}
+  	}
+	}
+
+	&__heading{
+		color: #0c0c0c; // text color
+		font-family:  $openSans;
+		font-size: 20px;
+		font-weight: bold;
+		padding-right: 16%;
+		@include breakpoint(tablet) {
+    	padding-right: 0;
+  	}
+	}
+	&__text{
+		color: #727272; // text color
+		font-family: "Open Sans", sans-serif;
+		font-size: 16px;
+		line-height: 25px;
+		margin-top: 25px;
+		padding-right: 16%;
+		@include breakpoint(tablet) {
+    	padding-right: 0;
+  	}
+	}
+	&__table{
+		overflow:auto;
+		@include span(8);
+		@include last;
+		padding-left: 3%;
+		box-sizing: border-box;
+	}
+	@include breakpoint(tablet) {
+		&__table{
+			@include span(12);
+   		margin-top: 25px;
+		}
+  }
+}
+
+.serviceItem{
+	@include span(4);
+	position: relative;
+	padding-top: 135px;
+	text-align: center;
+	&:last-of-type{
+		@include last;
+	}
+	&:before{
+		content:'';
+		left:50%;
+		margin-left: -52.5px;
+		top: 0;
+		width: 101px;
+		height: 101px;
+		border: 2px solid #f39b12; 
+		border-radius: 50%;
+		position: absolute;
+		transition: all .2s;
+	}
+	&:after{
+		content:'';
+		left:50%;
+		top: 0;
+		position: absolute;
+		
+	}
+	&:hover{
+		&:before{
+			background-color: #f39b11;
+		}
+	}
+	 @each $type in design dev brand {
+		&_type_#{$type}{
+			&:after{
+				@include icons-sprite($type);
+				width: icons-sprite-width($type);
+				height: icons-sprite-height($type);
+				margin-left: - icons-sprite-width($type) / 2;
+				top: 52.5px - icons-sprite-height($type) / 2;
+			}
+			&:hover{
+				&:after{
+					@include icons-sprite(#{$type}_hover);
+				}
+			}
+		}
+	 }
+	&__name{
+		color: #0c0c0c;
+		font-size: 20px;
+		font-weight: bold;
+	}
+	&__desc{
+		margin-top: 15px;
+		color: #727272;
+		font-size: 16px;
+		line-height: 30px;
+	}
+	@include breakpoint(phablet) {
+    @include span(12);
+    margin-top: 25px;
+  }
+}
+
+.pricing{
+	min-width:100%;
+	border-collapse: collapse;
+	&__header{
+		height: 118px;
+		color: #0c0c0c;
+		
+		font-size: 22px;
+		.pricing__basic{
+			border-right-color:  #f39c12;
+		}
+		.pricing__gold{
+			color: #ffffff;
+			background-color: #f39c12;
+			border-color: #f39c12;
+			border-top-width: 16px;
+		}
+	}
+	&__desc{
+		height: 48px;
+		color: #727272;
+		font-size: 15px;
+		.pricing__gold{
+			background-color: #f2f2f2;
+		}
+		&:nth-of-type(odd){
+			background-color: #f9f9f9;
+			.pricing__gold{
+				background-color: #e6e6e6;
+			}
+		}
+	}
+	&__purchase{
+		background-color: #f9f9f9;
+		height: 98px;
+		.pricing__gold{
+				background-color: #e6e6e6;
+				border-bottom-width: 16px;
+		}
+	}
+	&__basic{
+		width: 33%;
+		text-align: center;
+		border: 1px solid #e5e5e5;
+		
+		
+
+	}
+	&__gold{
+		width: 33%;
+		text-align: center;
+		border: 1px solid #e5e5e5;
+		.pricing__tarif:after{
+			background-color: #ffffff;
+		}
+	}
+	&__silver{
+		width: 33%;
+		text-align: center;
+		border: 1px solid #e5e5e5;
+	}
+	&__tarif{
+
+		font-weight: bold;
+		&:after{
+			content:'';
+			width: 50px;
+			height: 2px;
+			display: block;
+			background-color: #f39b12;
+			margin: 10px auto 10px auto;
+		}
+	}
+	&__price{
+		font-weight: bold;
+		&:before{
+			content:'$';
+		}
+	}
+}

@@ -1,0 +1,48 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3/background-clip";
+@import "compass/utilities/sprites";
+@import "icons/*.png";
+@import "susy";
+
+@import "grid";
+@import "typography";
+@import "parralax";
+@import "animations";
+@import "responsive";
+
+@import "blocks/general";
+@import "blocks/header";
+@import "blocks/about";
+@import "blocks/team";
+@import "blocks/service";
+@import "blocks/portfolio";
+@import "blocks/blog";
+@import "blocks/contact";
+@import "blocks/footer";
+@import "blocks/_gap.scss";
+
+html,body {
+	font-size: 10px;
+	font-family: $openSans;
+}
+
+.fadeInblock{ 
+	opacity: 1;
+	transition: opacity .1s  ease-in;
+}
+
+.page {
+	@extend .parallax;
+	@extend .fadeInblock;
+
+}
+
+.clear{
+	font-size:0;
+	clear:both;
+}

@@ -1,0 +1,504 @@
+.gap{
+	@extend .parallax__group;
+	z-index: -1;
+	height: 600px;
+	&__bg{
+		@extend .parallax__layer;
+		@extend .parallax__layer--back;
+		z-index: -1;
+		background: #000;
+		top: -300px;
+		bottom: -300px;
+		left: 0;
+		right: 0;
+		&::after{
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: image-url("gap_bg.jpg") 50% 50% no-repeat;
+			opacity: .3;
+		}
+	}
+ @include breakpoint(laptop) {
+ 		height: 500px;
+ }
+ @include breakpoint(tablet) {
+ 		height: 400px;
+ }
+ @include breakpoint(phablet) {
+ 		height: 350px;
+ }
+ @include breakpoint(mobileonly) {
+ 		height: 300px
+ }
+}
+
+.quote{
+	position: relative;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	font-size: 45px;
+	@include span(10);
+	@include push(1);
+	margin-top: 200px;
+	&:before, &:after{
+		content:'“';
+		font-size:2.44444em;
+		position: absolute;
+		display: inline-block;
+	}
+	&:before{
+		left: -0.4091em;
+		top: -0.18182em;
+	}
+	&:after{
+		transform: rotateX(180deg) rotateY(180deg);
+		right: -0.4091em;
+		top: -0.54545em;
+	}
+	&__text{
+		&:after{
+			content:'';
+			width: 1.11111em;
+			height: 4px;
+			background-color: #f39b12;
+			display: block;
+			margin: 40px auto 20px auto;
+		}
+	}
+	&__author{
+		font-size: 0.6em;
+		text-transform: uppercase;
+	}
+	@include breakpoint(laptop) {
+		font-size: 35px;
+		margin-top: 180px;
+	}
+	@include breakpoint(tablet) {
+		font-size: 28px;
+		margin-top: 150px;
+	}
+	@include breakpoint(phablet) {
+		font-size: 23px;
+		margin-top: 100px;
+	}
+	@include breakpoint(mobileonly) {
+		font-size: 20px;
+		margin-top: 50px;
+	}
+}
+
+.statistic{
+	font-size:0;
+	padding-top: 150px;
+	&__item{
+		color: #fff;
+		font-family: "Open Sans", sans-serif;
+		font-weight: bold;
+		display: inline-block;
+		text-align: center;
+		padding-top: 200px;
+		width: 15.25424%;
+		margin-right: 12.99434%;
+		position: relative;
+		&:last-of-type{
+			margin-right: 0;
+		}
+		&:before{
+			content:'';
+			display: block;
+			width: 166px;
+			height: 166px;
+			border: 2px solid #f39b12; 
+			border-radius: 50%;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			margin-left: -85px;
+			transition: border .2s;
+		}
+		&:hover:before{
+			border-color: #fff;
+		}
+		&:after{
+			content: '';
+			display: block;
+			position: absolute;
+			left: 50%;
+		}
+		@each $type in coffee project client award {
+		 &_type_#{$type}{
+		 	&:after{
+				@include icons-sprite($type);
+				width: icons-sprite-width($type);
+				height: icons-sprite-height($type);
+				margin-left: 0px - icons-sprite-width($type) / 2px;
+				top: 85px - icons-sprite-height($type) / 2px;	
+			}
+			&:hover:after{
+				@include icons-sprite(#{$type}_hover);
+			}
+		 }
+		}
+	}
+	&__value{
+		font-size: 45px;
+		margin-bottom: 5px;
+	}
+	&__name{
+		font-size: 25px;
+	}
+	@include breakpoint(laptop) {
+		padding-top: 125px;
+		&__item{
+			padding-top: 175px;
+			&:before{
+				width: 146px;
+				height: 146px;
+				margin-left: -75px;
+			}
+			@each $type in coffee project client award {
+		 		&_type_#{$type}{
+		 			&:after{
+						top: 75px - icons-sprite-height($type) / 2px;	
+					}
+		 		}
+			}
+		}
+		&__value{
+			font-size: 35px;
+		}
+ 		&__name{
+			font-size: 23px;
+		}
+ 	}
+ 	@include breakpoint(tablet) {
+ 		padding-top: 100px;
+ 		&__item{
+ 			padding-top: 150px;
+			&:before{
+				width: 126px;
+				height: 126px;
+				margin-left: -65px;
+			}
+			@each $type in coffee project client award {
+		 		&_type_#{$type}{
+		 			&:after{
+						top: 65px - icons-sprite-height($type) / 2px;	
+					}
+		 		}
+			}
+		}
+		&__value{
+			font-size: 28px;
+		}
+ 		&__name{
+			font-size: 20px;
+		}
+ 	}
+ 	@include breakpoint(phablet) {
+ 		padding-top: 75px;
+ 		&__item{
+ 			padding-top: 140px;
+			&:before{
+				width: 96px;
+				height: 96px;
+				margin-left: -50px;
+			}
+			@each $type in coffee project client award {
+		 		&_type_#{$type}{
+		 			&:after{
+						top: 50px - icons-sprite-height($type) / 2px;	
+					}
+		 		}
+			}
+		}
+		&__value{
+			font-size: 23px;
+		}
+ 		&__name{
+			font-size: 18px;
+		}
+ 	}
+ 	@include breakpoint(mobileonly) {
+ 		padding-top: 50px;
+ 		&__item{
+ 			padding-top: 100px;
+			&:before{
+				width: 66px;
+				height: 66px;
+				margin-left: -35px;
+			}
+			@each $type in coffee project client award {
+		 		&_type_#{$type}{
+		 			&:after{
+						top: 35px - icons-sprite-height($type) / 2px;	
+					}
+		 		}
+			}
+		}
+		&__value{
+			font-size: 18px;
+		}
+ 		&__name{
+			font-size: 16px;
+		}
+ 	}		
+}
+
+.clients{
+	font-size:0;
+	padding-top: 150px;
+	text-align: center;
+	&__heading{
+		color: #fff;
+		font-size: 30px;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-bottom: 50px;
+	}
+	&__list{
+		font-size:0;
+	}
+	&__item{
+		display: inline-block;
+		width: 22%;
+		margin-right: 4%;
+		height: 158px;
+		border: 2px solid rgba(255,255,255,.25);
+		box-sizing: border-box;
+		&:last-of-type{
+			margin-right: 0;
+		}
+	}
+	&__link{
+		width: 100%;
+		height: 100%;
+		display: block;
+		position: relative;
+	}
+	&__logo{
+		position: absolute;
+		max-width: 95%;
+		height: auto;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+	@include breakpoint(laptop) {
+		padding-top: 125px;
+		&__heading{
+			margin-bottom: 40px;
+		}
+		&__item{
+			height: 130px;
+		}
+	}
+ 	@include breakpoint(tablet) {
+ 		padding-top: 110px;
+		&__heading{
+			margin-bottom: 35px;
+		}
+		&__item{
+			height: 90px;
+		}
+ 	}
+ 	@include breakpoint(phablet) {
+ 		padding-top: 35px;
+		&__heading{
+			margin-bottom: 25px;
+		}
+		&__item{
+			height: 90px;
+			width: 45%;
+			margin-right: 10%;
+			margin-bottom: 15px;
+			&:nth-of-type(even){
+				margin-right: 0;
+			}
+		}
+ 	}
+ 	@include breakpoint(mobileonly) {
+ 		padding-top: 10px;
+		&__heading{
+			font-size: 20px;
+			margin-bottom: 15px;
+		}
+		&__item{
+			height: 75px;
+			width: 45%;
+			margin-right: 10%;
+			margin-bottom: 15px;
+			&:nth-of-type(even){
+				margin-right: 0;
+			}
+		}
+ 	}
+}
+
+.tweet{
+	padding-top: 180px;
+	color: #fff;
+	text-align: center;	
+	&__text{
+		position: relative;
+		padding-top: 135px;
+		font-size: 22px;
+		font-weight: bold;
+		width: 95%;
+		max-width: 830px;
+		margin: 0 auto;
+		line-height: 1.5em;
+		a {
+			color: #f39c12;
+			text-decoration: none;
+			&:hover{
+				text-decoration: underline;
+				
+			}
+		}
+		&:before{
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			border: 2px solid #fff;
+			border-radius: 50%;
+			content:'';
+			display: block;
+			margin: 0 auto;
+			top: 0;
+			left: 50%;
+			margin-left: -52px;
+
+		}
+		&:after{
+			position: absolute;
+			content:'';
+			@include icons-sprite(twitter);
+			width: icons-sprite-width(twitter);
+			height: icons-sprite-height(twitter);
+			left: 50%;
+			margin-left: 0px - icons-sprite-width(twitter) / 2;
+			top: 52px - icons-sprite-height(twitter) / 2;
+	
+		}
+	}
+	&__time{
+		font-size: 15px;
+		font-weight: 300;
+		font-style: italic;
+		margin-top: 25px;
+		color: #808080;
+	}
+	@include breakpoint(laptop) {
+		padding-top: 125px;
+	}
+ 	@include breakpoint(tablet) {
+ 		padding-top: 50px;
+ 	}
+ 	@include breakpoint(phablet) {
+ 		padding-top: 40px;
+ 		&__text{
+ 			font-size:18px;
+ 			padding-top: 110px;
+ 			&:before{
+ 				width: 80px;
+				height: 80px;
+				margin-left: -42px;
+ 			}
+ 			&:after{
+				top: 42px - icons-sprite-height(twitter) / 2;
+ 			}
+ 		}
+ 	}
+ 	@include breakpoint(mobileonly) {
+ 		padding-top: 0;
+ 		&__text{
+ 			font-size:16px;
+ 			padding-top: 75px;
+ 			&:before{
+ 				width: 60px;
+				height: 60px;
+				margin-left: -32px;
+ 			}
+ 			&:after{
+				top: 32px - icons-sprite-height(twitter) / 2;
+ 			}
+ 		}
+ 		&__time{
+			margin-top: 15px;
+		}
+ 	}
+}
+
+.feedback{
+	color: #fff;
+	text-align: center;
+	font-size: 22px;
+	&__name{
+		font-size: 1,09091em;
+		font-weight: bold;
+		&:after{
+			content:"";
+			margin: 15px auto 35px auto;
+			display: block;
+			width: 50px;
+			height: 4px;
+			background-color: #f39b12;
+		}
+	}
+	&__text{
+		font-style: italic;
+		width: 95%;
+		max-width: 765px;
+		margin: 0 auto 25px auto;
+		
+	}
+	&__photo{
+		width: 100px;
+		height: 100px;
+		border: 2px solid #fff;
+		border-radius: 50%;
+		position: relative;
+		overflow: hidden;
+		display: inline-block;
+		img {
+			width: auto;
+			height: auto;
+			min-width: 100%;
+			min-height: 100%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+		}
+	}
+ 	@include breakpoint(tablet) {
+ 		font-size:20px;
+ 	}
+ 	@include breakpoint(phablet) {
+ 		font-size:18px;
+ 		&__name:after{
+			margin: 10px auto 15px auto;
+ 		}
+ 	}
+ 	@include breakpoint(mobileonly) {
+ 		font-size:16px;
+ 		&__text{
+			margin: 0 auto 10px auto;
+		}
+ 		&__photo{
+			width: 70px;
+			height: 70px;
+			img{
+				width: 100%;
+			}
+		}
+ 	}
+}
