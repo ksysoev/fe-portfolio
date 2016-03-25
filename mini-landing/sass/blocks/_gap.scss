@@ -7,8 +7,8 @@
 		@extend .parallax__layer--back;
 		z-index: -1;
 		background: #000;
-		top: -300px;
-		bottom: -300px;
+		top: -100px;
+		bottom: -100px;
 		left: 0;
 		right: 0;
 		&::after{
@@ -25,9 +25,14 @@
 	}
  @include breakpoint(laptop) {
  		height: 500px;
+ 	
  }
  @include breakpoint(tablet) {
  		height: 400px;
+ 			&__bg{
+ 			top: -200px;
+			bottom: -200px;
+ 		}
  }
  @include breakpoint(phablet) {
  		height: 350px;
