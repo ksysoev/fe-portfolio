@@ -19,7 +19,7 @@
   margin: 0 10px 38px;
   display: inline-block;
   border: 1px solid rgba(255,255,255,.41);
-  background: linear-gradient(bottom, #31393f 0%, #9ea9b8 50%, #31393f 100%); 
+  background: linear-gradient(to bottom, #31393f 0%, #9ea9b8 50%, #31393f 100%); 
   &__imageBox {
     width: 186px;
     height: 100px;
@@ -79,7 +79,7 @@
     margin-left: -68.5px; 
     border-radius: 5px; 
     box-shadow: 0 2px 1px #042149, inset 0 1px 0 rgba(255,255,255,.4), inset 0 0 0 1px rgba(255,255,255,.08); 
-    background-image: linear-gradient(bottom, #4c38bc 0%, #0089ed 100%);
+    background-image: linear-gradient(to bottom, #4c38bc 0%, #0089ed 100%);
     color: #ffffff;
     font-size: 24px;
     font-weight: bold;
