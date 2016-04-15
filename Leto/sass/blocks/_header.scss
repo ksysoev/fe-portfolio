@@ -1,0 +1,190 @@
+.header {
+  width: 100%;
+  min-width: 640px;
+  max-width: 1325px;
+  height: 650px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  padding-top: 75px;
+  background: image-url("bg.jpg") 50% 0 no-repeat;
+  &__content {
+    width: 370px;
+    margin: 0 auto;
+    text-align: center;
+    transform-style: preserve-3d;
+    perspective: 100px;
+  } 
+  &__logo {
+    background: image-url("logo.png") 0 -48px no-repeat;
+    width: 335px;
+    height: 46px;
+    margin: 0 auto 65px;
+    animation: logo 2s infinite;
+    transition: none;
+  }
+}
+
+.slider {
+  position: relative;
+  padding-top: 125px;
+  margin-bottom: 40px;
+  text-align: center;
+  &__item {
+    display: block;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    animation: slider__item 20s infinite;
+
+    &:nth-of-type(2){
+      animation-delay: 5s;
+    }
+    &:nth-of-type(3){
+      animation-delay: 10s;
+    }
+    &:nth-of-type(4){
+      animation-delay: 15s;
+    }
+  }
+  &__text {
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: bold;
+    width: 100%;
+    &_type_em {
+      color: #fd2550;
+      text-shadow: 1px 1px 0 rgba(116,23,38,.75);
+      margin-bottom: 30px;
+    }
+  }
+}
+.automaty {
+  position: absolute;
+  width: 450px;
+  height: 540px;
+  top: 55px;
+  left: 50%;
+  z-index: 1;
+  &_loc_left {
+    background: image-url("avtomaty-left.png") no-repeat;
+    transform: translateX(-650px);
+    .automaty__display {
+      &_type_first {
+        width: 169px;
+        height: 97px;
+        background: image-url("big_rob.gif") no-repeat;
+        top: 213px;
+        left: 97px;
+      }
+      &_type_second {
+        width: 151px;
+        height: 97px;
+        background: image-url("pearl_lag.gif") no-repeat;
+        top: 213px;
+        left: 267px;
+      }  
+    }
+    &:after, &:before {
+      content: '';
+      position: absolute;
+      background: image-url('left_shadow.png') no-repeat;
+      width: 238px;
+      height: 88px;
+      z-index: -1;
+    }
+    &:after {
+      bottom: -17px;
+      left: 67px;
+    }
+    &:before {
+      bottom: 45px;
+      left: 240px;
+    }
+  }
+  &_loc_right {
+    background: image-url("avtomaty-right.png") no-repeat;
+    transform: translateX(200px);
+    .automaty__display {
+      &_type_first {
+        width: 174px;
+        height: 97px;
+        background: image-url("aztecs.gif") no-repeat;
+        top: 216px;
+        left: 190px;
+      }
+
+      &_type_second {
+        width: 160px;
+        height: 97px;
+        background: image-url("hot_targ.gif") no-repeat;
+        top: 216px;
+        left: 30px;
+      }  
+    }
+    &:after, &:before {
+      content: '';
+      position: absolute;
+      background: image-url('right_shadow.png') no-repeat;
+      width: 242px;
+      height: 67px;
+      z-index: -1;
+    }
+    &:after {
+      bottom: 0px;
+      left: 130px;
+    }
+    &:before {
+      bottom: 60px;
+      left: 0px;
+    }
+  }
+  &__display {
+    position: absolute;
+  }
+}
+
+@keyframes slider__item {   
+    0% {
+      transform: translateX(400px);
+      opacity: 0;
+    }
+    5%{
+      opacity: 1;
+      transform: translateX(0px);
+    }
+    20% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+    25% {
+      opacity: 0;  
+      transform: translateX(-400px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(400px);
+    }
+}
+
+@keyframes logo {
+  0% {
+    background-position-y: -50px; 
+  }
+  49.9999% {
+    background-position-y: -50px;   
+  }
+  50% {
+    background-position-y: -200px;
+  }
+  99.9999% {
+    background-position-y: -200px;
+  }
+  100% {
+    background-position-y: -50px;
+  }
+}
